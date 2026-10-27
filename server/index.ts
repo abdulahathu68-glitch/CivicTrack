@@ -126,5 +126,28 @@ app.post('/api/contact',async(req,res)=>{
 app.get('/api/stats',async(_req,res)=>{
  try{const q=await pool.query("SELECT COUNT(*)::int AS total,COUNT(*) FILTER(WHERE status='Resolved')::int AS resolved,COUNT(*) FILTER(WHERE status IN ('Submitted','Under Review'))::int AS awaiting,COUNT(*) FILTER(WHERE status='In Progress')::int AS in_progress FROM complaints");res.json(q.rows[0]);}catch{res.json({total:0,resolved:0,awaiting:0,in_progress:0});}
 });
+// Serve the built React/Vite frontend.
+const distDir = path.resolve('dist');
+
+if (fs.existsSync(path.join(distDir, 'index.html'))) {
+  app.use(express.static(distDir));
+
+  app.get('*', (req, res, next) => {
+    if (
+      req.path === '/api' ||
+      req.path.startsWith('/api/') ||
+      req.path === '/uploads' ||
+      req.path.startsWith('/uploads/')
+    ) {
+      return next();
+    }
+
+    if (req.method !== 'GET') return next();
+
+    res.sendFile(path.join(distDir, 'index.html'), err => {
+      if (err) next(err);
+    });
+  });
+}
 app.use((err:any,_req:any,res:any,_next:any)=>{console.error(err);res.status(500).json({error:'Unexpected server error. Check the server logs.'});});
 app.listen(port,()=>console.log(`CivicTrack API listening on http://localhost:${port}`));
