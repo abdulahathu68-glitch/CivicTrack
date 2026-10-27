@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>CivicTrack TN - Tamil Nadu Urban Grievance Redressal Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #c3c6d0; border-radius: 3px; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00254e",
+            "primary-container": "#123b6d",
+            "secondary": "#0261a2",
+            "secondary-container": "#76b8fe",
+            "surface": "#f8fafc",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f1f5f9",
+            "surface-container": "#e2e8f0",
+            "surface-container-high": "#cbd5e1",
+            "surface-container-highest": "#94a3b8",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#475569",
+            "outline": "#64748b",
+            "outline-variant": "#dce3e9",
+            "gov-border": "#dce3e9",
+            "tertiary": "#00451c",
+            "tertiary-container": "#e8f5e9",
+            "error": "#b91c1c"
+          },
+          borderRadius: {
+            DEFAULT: "4px",
+            sm: "2px",
+            md: "4px",
+            lg: "6px",
+            xl: "8px"
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased min-h-screen flex flex-col">
+<!-- Government Institutional Top Accessibility Bar -->
+<header class="fixed top-0 w-full z-50 bg-white border-b border-gov-border">
+<div class="bg-[#001e3d] text-white py-1 text-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-semibold tracking-wide">தமிழ்நாடு அரசு</span>
+<span class="text-slate-400">|</span>
+<span class="text-slate-200 hidden sm:inline">Government of Tamil Nadu — Municipal Digital Public Grievance Portal</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium">
+<div class="flex items-center gap-1">
+<span class="text-slate-300">Font:</span>
+<button class="px-1.5 py-0.5 rounded hover:bg-slate-700">A-</button>
+<button class="px-1.5 py-0.5 rounded bg-slate-700 text-white font-bold">A</button>
+<button class="px-1.5 py-0.5 rounded hover:bg-slate-700">A+</button>
+</div>
+<span class="text-slate-500">|</span>
+<button class="hover:text-amber-300 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">contrast</span> Contrast
+          </button>
+<span class="text-slate-500">|</span>
+<button class="font-bold hover:text-amber-300 text-amber-200">தமிழ்</button>
+</div>
+</div>
+</div>
+<!-- Official Portal Identity & Nav Header -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-3" href="#">
+<img alt="CivicTrack Official Seal" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWKpzHoyX_VIafJ7kEoeirp0ECmc02ZZBwtSQoqEyo5ejDCLLYMbBYBPVyYyO6aHUPnXRSe-iGttN3uibHdKBpVAhhAeRPQUAVFpnOhfsX9z-DIDoj-dY6BQrgIzEf7DGZEZ4YsW1vHoCIPD-Eqy-z_HibW40SrVdQNGfE6eQCzPkniFLM2xXIJ_RFJdZ707n5uN4znV_wP0_gPX--FYO3wpPSwEXeAWyI7bO2dtGi4YYP9-H97AGq6yEg1OvnfcPHtg"/>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="text-xl font-bold tracking-tight text-primary">CivicTrack TN</span>
+<span class="text-[11px] font-semibold uppercase tracking-wider text-secondary bg-blue-50 px-1.5 py-0.5 border border-blue-200 rounded">TN-ULB</span>
+</div>
+<span class="text-[12px] font-medium text-on-surface-variant leading-tight">
+              Tamil Nadu Urban Grievance Redressal | நகராட்சி குறைதீர்ப்பு சேவை
+            </span>
+</div>
+</a>
+</div>
+<!-- Main Navigation -->
+<nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+<a aria-current="page" class="px-3 py-1.5 rounded text-primary font-semibold bg-slate-100 border border-slate-200" href="#">Home</a>
+<a class="px-3 py-1.5 rounded text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors" data-path="submit-complaint" href="#">Submit Complaint</a>
+<a class="px-3 py-1.5 rounded text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors" href="#quick-track">Track Complaint</a>
+<a class="px-3 py-1.5 rounded text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors" data-path="citizen-dashboard" href="#">Citizen Dashboard</a>
+<a class="px-3 py-1.5 rounded text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors" href="#citizen-charter">Citizen Charter</a>
+<a class="px-3 py-1.5 rounded text-slate-700 hover:text-primary hover:bg-slate-50 transition-colors" href="#emergency">Emergency Lines</a>
+</nav>
+<!-- Portals & Actions -->
+<div class="flex items-center gap-2">
+<a class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold text-primary border border-gov-border rounded hover:bg-slate-50 transition-colors" data-path="login" href="#">
+          Citizen Login
+        </a>
+<a class="inline-flex items-center gap-1 px-3.5 py-1.5 text-xs font-semibold text-white bg-primary rounded hover:bg-primary-container transition-colors shadow-none" data-path="officer-overview" href="#">
+<span class="material-symbols-outlined text-[15px]">admin_panel_settings</span>
+          Officer Control Room
+        </a>
+</div>
+</div>
+</header>
+<main class="w-full pt-28 flex-grow">
+<!-- Official Bulletin / SLA Ticker -->
+<div class="bg-blue-50/80 border-b border-blue-200 py-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-slate-700 gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 bg-primary text-white px-2 py-0.5 rounded text-[11px] font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[12px]">verified</span> Government Order
+          </span>
+<span class="font-medium text-slate-800">Monsoon Preparedness Protocol 2025: Ward-level desilting, culvert clearing &amp; road restoration in active enforcement.</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-slate-600">
+<span>Average Redressal Speed: <strong class="text-primary font-bold">31.4 Hours</strong></span>
+<span class="text-slate-300">|</span>
+<span>Active ULBs: <strong class="text-primary font-bold">142 Urban Bodies</strong></span>
+</div>
+</div>
+</div>
+<!-- Administrative Hero Section -->
+<section class="bg-slate-50 border-b border-gov-border py-8 lg:py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Column: Title & Actions -->
+<div class="lg:col-span-7 space-y-4">
+<div class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-700 bg-white border border-gov-border px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-secondary text-[16px]">domain</span>
+              Municipal Administration &amp; Water Supply Department, Tamil Nadu
+            </div>
+<div class="space-y-1">
+<h1 class="text-2xl sm:text-[30px] font-bold text-primary tracking-tight leading-tight">
+                Your Complaint. Your City. Tracked.
+              </h1>
+<p class="text-base sm:text-lg font-semibold text-secondary">
+                உங்கள் குறைகள், உங்கள் நகரம், விரைவான நிர்வாகத் தீர்வு.
+              </p>
+</div>
+<p class="text-sm text-slate-600 leading-relaxed max-w-2xl">
+              Official public grievance portal for Corporation, Municipal, and Town Panchayat limits across Tamil Nadu. Lodge municipal complaints, monitor field officer inspection reports, and track SLA commitments with official audit numbers.
+            </p>
+<!-- Dual Primary Actions -->
+<div class="pt-2 flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-primary text-white text-sm font-semibold hover:bg-primary-container transition-colors border border-primary" data-path="submit-complaint" href="#">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+                Submit a Complaint / புகார் பதிவு செய்
+              </a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-white text-primary text-sm font-semibold hover:bg-slate-100 transition-colors border border-gov-border" href="#quick-track">
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+                Track a Complaint / புகாரைக் கண்காணிக்க
+              </a>
+</div>
+<!-- Authentic Institutional Metric Badges -->
+<div class="pt-3 grid grid-cols-3 gap-3 max-w-lg">
+<div class="bg-white border border-gov-border p-2.5 rounded">
+<div class="text-base font-bold text-primary">100% Digital</div>
+<div class="text-xs text-slate-500 mt-0.5">SMS Notification &amp; Token Audit</div>
+</div>
+<div class="bg-white border border-gov-border p-2.5 rounded">
+<div class="text-base font-bold text-primary">48 Hours</div>
+<div class="text-xs text-slate-500 mt-0.5">Statutory Officer First-Review</div>
+</div>
+<div class="bg-white border border-gov-border p-2.5 rounded">
+<div class="text-base font-bold text-primary">142 Bodies</div>
+<div class="text-xs text-slate-500 mt-0.5">Corporations &amp; Municipalities</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Verification Evidence Card -->
+<div class="lg:col-span-5">
+<div class="bg-white border border-gov-border rounded-lg p-4 shadow-none">
+<div class="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-bold text-primary uppercase tracking-wide">Live Resolution Record</span>
+</div>
+<span class="text-slate-500 font-medium">Zone 9, Ward 114 (Chennai)</span>
+</div>
+<!-- Photographic Evidence Photo -->
+<div class="relative w-full h-44 bg-slate-100 overflow-hidden my-3 border border-slate-200 rounded">
+<img alt="Municipal road repair works by field staff in Tamil Nadu" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKEhD4ClkXGufPqYNZstnwbqOzuleZVn9EGno-BFirHFr4Bae_ZxWzjRe6dQFu7BW1l_ohej8h45FyckPN7yKuqapWY2zYN3WFjsvAIg9lvg-WOc3j3tg8FQ1tTvKCqmFerqsc-e-Gnl7pZFPjJSYNSCuCPKapiow9kcj5pDmtqoq2-JJobe3_pCjtRMJbq-_YwjirEgNATeZDGIudpuYSTQ3lz5R_S6gNz5zEal5An5JQXV4mDZpb"/>
+<div class="absolute bottom-2 left-2 bg-primary/95 text-white px-2 py-0.5 rounded text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                  Ref: TN-CHN-2025-09823 • Verified Resolution
+                </div>
+</div>
+<div class="text-xs space-y-1.5">
+<div class="flex justify-between items-baseline">
+<span class="font-bold text-slate-900">Bituminous Pothole Patchwork Completed</span>
+<span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Closed in 18 hrs</span>
+</div>
+<p class="text-slate-600 leading-normal">
+                  Kamarajar Salai road junction resurfacing inspected and certified by Ward Assistant Engineer.
+                </p>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span>Inspecting AE: Er. A. Selvam</span>
+<span>TN Urban Grievance Cell</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pragmatic Institutional Quick Status Check -->
+<section class="bg-white border-b border-gov-border py-6" id="quick-track">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="bg-slate-50 border border-gov-border rounded-lg p-5">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="max-w-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">search_check</span>
+<h2 class="text-base font-bold text-primary">
+                  Quick Status Check / விரைவு நிலை சரிபார்ப்பு
+                </h2>
+</div>
+<p class="text-xs text-slate-600 mt-1">
+                Enter your official grievance reference number to view assigned officer, inspection notes, and progress milestone.
+              </p>
+</div>
+<!-- Single Line Reference Input Strip -->
+<div class="flex-1 max-w-xl">
+<form class="flex flex-col sm:flex-row gap-2" onsubmit="handleTrackDemo(event)">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">confirmation_number</span>
+<input class="w-full h-10 pl-9 pr-3 text-xs bg-white border border-gov-border rounded font-mono text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary" id="complaintRefInput" placeholder="e.g., TN-TRY-2025-08492 or TN-MDU-2025-10291" required="" type="text"/>
+</div>
+<button class="h-10 px-5 bg-primary text-white text-xs font-semibold rounded hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap" type="submit">
+<span class="material-symbols-outlined text-[16px]">search</span>
+                  Track Status
+                </button>
+</form>
+<div class="mt-2 flex items-center gap-1.5 text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-[14px] text-slate-400">info</span>
+<span>Reference number format: TN-[District 3-letter]-[Year]-[5-digit token] received via SMS.</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Mock Tracking Result Drawer -->
+<div class="hidden mt-4 pt-4 border-t border-gov-border" id="quickTrackResult">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 gap-2">
+<div>
+<span class="text-[11px] font-semibold uppercase text-slate-500 tracking-wide">Registry Token</span>
+<div class="flex items-center gap-2">
+<span class="text-base font-bold font-mono text-primary" id="displayRefNumber">TN-TRY-2025-08492</span>
+<span class="text-xs bg-blue-100 text-blue-900 border border-blue-200 px-2 py-0.5 rounded font-semibold">In Progress / விசாரணையில்</span>
+</div>
+</div>
+<div class="text-xs text-slate-600 sm:text-right">
+<span class="font-medium">Zone 2, Tiruchirappalli City Corporation</span>
+<div class="text-[11px] text-slate-500">Filed: 24 Oct 2025 • SLA Mandate: 48 Hours</div>
+</div>
+</div>
+<!-- Progress Tracker -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2">
+<div class="bg-white border border-emerald-200 p-2.5 rounded">
+<div class="text-xs font-semibold text-emerald-800 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 1. Registered
+                </div>
+<div class="text-[11px] text-slate-500 mt-1">24 Oct, 09:12 AM</div>
+</div>
+<div class="bg-white border border-emerald-200 p-2.5 rounded">
+<div class="text-xs font-semibold text-emerald-800 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 2. Officer Assigned
+                </div>
+<div class="text-[11px] text-slate-500 mt-1">Er. S. Ramanathan (AE)</div>
+</div>
+<div class="bg-blue-50 border border-blue-300 p-2.5 rounded">
+<div class="text-xs font-semibold text-blue-900 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">autorenew</span> 3. Site Inspection
+                </div>
+<div class="text-[11px] text-blue-700 mt-1">Field crew on site</div>
+</div>
+<div class="bg-slate-100 border border-slate-200 p-2.5 rounded opacity-75">
+<div class="text-xs font-semibold text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending</span> 4. Redressal Sign-off
+                </div>
+<div class="text-[11px] text-slate-500 mt-1">Awaiting citizen review</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Municipal Service Categories Section -->
+<section class="py-10 bg-white border-b border-gov-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-2 mb-6">
+<div>
+<div class="text-xs font-bold uppercase tracking-wider text-secondary">Citizen Redressal Directory</div>
+<h2 class="text-xl font-bold text-primary mt-0.5">
+              Municipal Service Categories / நகராட்சி சேவைகள்
+            </h2>
+<p class="text-xs text-slate-600 mt-1">
+              Select an urban service domain to file an official grievance with automated departmental ward routing.
+            </p>
+</div>
+<a class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline" data-path="submit-complaint" href="#">
+            View All Classification Codes <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+<!-- 8 Efficient Compact Grid Domains -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<!-- 1. Roads & Potholes -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit_road</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 48h - 72h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Roads &amp; Potholes</h3>
+<p class="text-xs text-secondary font-medium">சாலைகள் மற்றும் குழிகள்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Potholes, damaged bitumen, road-cuts, and damaged kerb medians.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 2. Garbage & Solid Waste -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</div>
+<span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">SLA: 24h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Garbage &amp; Solid Waste</h3>
+<p class="text-xs text-secondary font-medium">திடக்கழிவு மேலாண்மை</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Overflowing bins, door-to-door skips, unauthorized garbage dumps.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 3. Water Supply -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">SLA: 24h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Water Supply</h3>
+<p class="text-xs text-secondary font-medium">குடிநீர் விநியோகம்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Pipeline leaks, discolored supply, low pressure, valve faults.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 4. Drainage & Sewage -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">waves</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 24h - 48h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Drainage &amp; Sewage</h3>
+<p class="text-xs text-secondary font-medium">கழிவுநீர் &amp; வடிகால்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Blocked stormwater channels, open manholes, sewage overflow.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 5. Street Lighting -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 48h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Street Lighting</h3>
+<p class="text-xs text-secondary font-medium">தெரு விளக்குகள்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                LED lamp failure, damaged lamp poles, exposed wires, timing faults.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 6. Public Health & Sanitation -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 24h - 48h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Public Health &amp; Sanitation</h3>
+<p class="text-xs text-secondary font-medium">பொது சுகாதாரம்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Mosquito fogging requests, animal carcasses, public toilet upkeep.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 7. Public Spaces & Parks -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">park</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 72h</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Parks &amp; Encroachments</h3>
+<p class="text-xs text-secondary font-medium">பூங்காக்கள் &amp; பொது இடங்கள்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Fallen branches, damaged play equipment, footpath barriers.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+<!-- 8. Other Civic Issues -->
+<a class="group block p-3.5 bg-white border border-gov-border rounded hover:border-primary hover:bg-slate-50 transition-all" data-path="submit-complaint" href="#">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded bg-slate-100 border border-slate-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">SLA: 7 Days</span>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-bold text-slate-900 group-hover:text-primary">Other Municipal Issues</h3>
+<p class="text-xs text-secondary font-medium">இதர நகராட்சி சேவைகள்</p>
+<p class="text-xs text-slate-600 mt-1.5 leading-normal">
+                Unauthorized construction, trade license queries, civic complaints.
+              </p>
+</div>
+<div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-primary">
+<span>File Grievance</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Accountability Pipeline Section -->
+<section class="py-10 bg-slate-50 border-b border-gov-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="text-center max-w-2xl mx-auto mb-8">
+<span class="text-xs font-bold uppercase tracking-wider text-secondary">Accountability Pipeline</span>
+<h2 class="text-xl font-bold text-primary mt-1">
+            How CivicTrack Works / சேவை செயல்படும் முறை
+          </h2>
+<p class="text-xs text-slate-600 mt-1">
+            Standard Operating Procedure (SOP) under Tamil Nadu Municipal Redressal Rules.
+          </p>
+</div>
+<!-- 5 Steps Horizontal Linear Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+<!-- Step 1 -->
+<div class="bg-white border border-gov-border p-3.5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-6 h-6 rounded bg-primary text-white text-xs font-bold flex items-center justify-center">1</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">app_registration</span>
+</div>
+<h3 class="text-sm font-bold text-primary">Complaint Submission</h3>
+<p class="text-xs text-secondary font-medium">புகார் பதிவு</p>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Resident enters location, Ward No, selects service category, and attaches site photos.
+              </p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
+              Average time: &lt; 2 minutes
+            </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white border border-gov-border p-3.5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-6 h-6 rounded bg-primary text-white text-xs font-bold flex items-center justify-center">2</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">sms</span>
+</div>
+<h3 class="text-sm font-bold text-primary">Token Generated</h3>
+<p class="text-xs text-secondary font-medium">குறிப்பு எண் பெறுதல்</p>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Immutable state registry reference sent by SMS with designated officer details.
+              </p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
+              Immediate (Instant SMS)
+            </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white border border-gov-border p-3.5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-6 h-6 rounded bg-primary text-white text-xs font-bold flex items-center justify-center">3</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">assignment_ind</span>
+</div>
+<h3 class="text-sm font-bold text-primary">Officer Assignment</h3>
+<p class="text-xs text-secondary font-medium">அதிகாரி ஒதுக்கீடு</p>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Control room routes grievance to Ward Assistant Engineer or Sanitary Inspector.
+              </p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
+              Within 6 working hours
+            </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-white border border-gov-border p-3.5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-6 h-6 rounded bg-primary text-white text-xs font-bold flex items-center justify-center">4</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">engineering</span>
+</div>
+<h3 class="text-sm font-bold text-primary">Field Inspection</h3>
+<p class="text-xs text-secondary font-medium">கள ஆய்வு &amp; பணி</p>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Field maintenance squads dispatch on site, complete remediation, and record GPS proof.
+              </p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 text-[11px] text-slate-500 font-medium">
+              Within statutory SLA
+            </div>
+</div>
+<!-- Step 5 -->
+<div class="bg-white border border-gov-border p-3.5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="w-6 h-6 rounded bg-emerald-800 text-white text-xs font-bold flex items-center justify-center">5</span>
+<span class="material-symbols-outlined text-emerald-700 text-[18px]">verified</span>
+</div>
+<h3 class="text-sm font-bold text-primary">Citizen Sign-off</h3>
+<p class="text-xs text-secondary font-medium">தீர்வு &amp; ஏற்பளிப்பு</p>
+<p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Citizen receives resolution photos; status moves to Closed upon resident verification.
+              </p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 text-[11px] text-emerald-700 font-semibold">
+              Final Citizen Confirmation
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Citizen Charter & Emergency Hotlines -->
+<section class="py-10 bg-white border-b border-gov-border" id="citizen-charter">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left: Emergency Contacts Directory -->
+<div class="lg:col-span-4 bg-slate-50 border border-gov-border rounded-lg p-5 flex flex-col justify-between" id="emergency">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-600 text-[22px]">emergency</span>
+<h3 class="text-base font-bold text-primary">Emergency Civic Hotlines</h3>
+</div>
+<p class="text-xs text-slate-600">
+                For life-threatening hazards, electric spark emergencies, or active pipeline bursts, dial direct dispatch:
+              </p>
+<div class="space-y-2">
+<div class="p-2.5 bg-white border border-gov-border rounded flex items-center justify-between">
+<div>
+<div class="text-xs font-bold text-slate-900">TANGEDCO (Electricity Board)</div>
+<div class="text-[11px] text-slate-500">Live wires, broken conductors &amp; poles</div>
+</div>
+<span class="text-base font-bold font-mono text-primary">1912</span>
+</div>
+<div class="p-2.5 bg-white border border-gov-border rounded flex items-center justify-between">
+<div>
+<div class="text-xs font-bold text-slate-900">Disaster &amp; Fire Rescue</div>
+<div class="text-[11px] text-slate-500">Inundations, collapsed trees &amp; rescue</div>
+</div>
+<span class="text-base font-bold font-mono text-primary">101 / 112</span>
+</div>
+<div class="p-2.5 bg-white border border-gov-border rounded flex items-center justify-between">
+<div>
+<div class="text-xs font-bold text-slate-900">TWAD / Metro Water Emergency</div>
+<div class="text-[11px] text-slate-500">Major main burst &amp; potable tankers</div>
+</div>
+<span class="text-xs font-bold font-mono text-primary">044-4567 4567</span>
+</div>
+</div>
+</div>
+<div class="pt-4 mt-4 border-t border-slate-200 text-[11px] text-slate-500">
+              Operates 24/7 across all 38 districts of Tamil Nadu.
+            </div>
+</div>
+<!-- Right: Citizen Charter Redressal Table -->
+<div class="lg:col-span-8 bg-white border border-gov-border rounded-lg p-5 flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">gavel</span>
+<h3 class="text-base font-bold text-primary">Citizen Redressal Charter &amp; Timelines</h3>
+</div>
+<span class="text-[11px] font-semibold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">
+                  Tamil Nadu Urban Local Bodies Rules
+                </span>
+</div>
+<p class="text-xs text-slate-600 mt-2">
+                Mandatory resolution deadlines governing municipal corporations, municipalities, and town panchayats:
+              </p>
+<div class="overflow-x-auto mt-3">
+<table class="w-full text-left text-xs">
+<thead>
+<tr class="bg-slate-50 border-y border-gov-border text-slate-700 font-bold">
+<th class="py-2 px-3">Service Scope</th>
+<th class="py-2 px-3">Primary Action Officer</th>
+<th class="py-2 px-3">Mandatory Redressal SLA</th>
+<th class="py-2 px-3">Escalation Authority</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 text-slate-700">
+<tr>
+<td class="py-2.5 px-3 font-semibold text-primary">Streetlight Outage</td>
+<td class="py-2.5 px-3 text-slate-600">Electrical Inspector (Ward)</td>
+<td class="py-2.5 px-3 font-bold text-secondary">48 Hours</td>
+<td class="py-2.5 px-3 text-slate-600">Executive Engineer (Elec)</td>
+</tr>
+<tr>
+<td class="py-2.5 px-3 font-semibold text-primary">Drinking Water Contamination / Leak</td>
+<td class="py-2.5 px-3 text-slate-600">Assistant Engineer (Water Supply)</td>
+<td class="py-2.5 px-3 font-bold text-secondary">24 Hours</td>
+<td class="py-2.5 px-3 text-slate-600">Executive Engineer (WS)</td>
+</tr>
+<tr>
+<td class="py-2.5 px-3 font-semibold text-primary">Garbage Collection / Dump Clearance</td>
+<td class="py-2.5 px-3 text-slate-600">Sanitary Inspector (Health)</td>
+<td class="py-2.5 px-3 font-bold text-secondary">24 Hours</td>
+<td class="py-2.5 px-3 text-slate-600">City Health Officer (CHO)</td>
+</tr>
+<tr>
+<td class="py-2.5 px-3 font-semibold text-primary">Pothole Repair &amp; Road Patchwork</td>
+<td class="py-2.5 px-3 text-slate-600">Road Maintenance AE</td>
+<td class="py-2.5 px-3 font-bold text-secondary">72 Hours</td>
+<td class="py-2.5 px-3 text-slate-600">Zonal Officer / Commissioner</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Administrative Disclaimer Strip -->
+<div class="mt-4 p-2.5 bg-blue-50 border border-blue-200 rounded flex items-center gap-2 text-xs text-slate-700">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">policy</span>
+<div>
+<strong class="text-primary font-semibold">Government Notice:</strong> Escalations occur automatically into the Commissioner's review dashboard if statutory SLAs are breached.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Official Public Service Footer -->
+<footer class="bg-white border-t border-gov-border">
+<div class="bg-slate-50 py-8 border-b border-gov-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-xs">
+<!-- Col 1: Identity -->
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<img alt="CivicTrack Seal" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWKpzHoyX_VIafJ7kEoeirp0ECmc02ZZBwtSQoqEyo5ejDCLLYMbBYBPVyYyO6aHUPnXRSe-iGttN3uibHdKBpVAhhAeRPQUAVFpnOhfsX9z-DIDoj-dY6BQrgIzEf7DGZEZ4YsW1vHoCIPD-Eqy-z_HibW40SrVdQNGfE6eQCzPkniFLM2xXIJ_RFJdZ707n5uN4znV_wP0_gPX--FYO3wpPSwEXeAWyI7bO2dtGi4YYP9-H97AGq6yEg1OvnfcPHtg"/>
+<span class="text-sm font-bold text-primary">CivicTrack TN</span>
+</div>
+<p class="text-slate-600 leading-normal">
+            Unified Public Grievance Redressal and Municipal Operations Management Portal. Government of Tamil Nadu.
+          </p>
+<div class="text-[11px] text-slate-500 pt-1">
+            Engine Version: ULB-2.4 (National e-Gov Standard)
+          </div>
+</div>
+<!-- Col 2: Citizen Services -->
+<div class="space-y-2">
+<h4 class="font-bold text-primary text-xs uppercase tracking-wide">Citizen Services</h4>
+<ul class="space-y-1.5 text-slate-600">
+<li><a class="hover:text-primary transition-colors" data-path="submit-complaint" href="#">Register Grievance / புதிய புகார்</a></li>
+<li><a class="hover:text-primary transition-colors" href="#quick-track">Track Complaint Status / நிலை அறிதல்</a></li>
+<li><a class="hover:text-primary transition-colors" href="#citizen-charter">Citizen Charter Norms &amp; Timelines</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Know Your Ward Engineer &amp; Sanitary Inspector</a></li>
+</ul>
+</div>
+<!-- Col 3: Central Helpline -->
+<div class="space-y-2">
+<h4 class="font-bold text-primary text-xs uppercase tracking-wide">State Grievance Helpline</h4>
+<div class="p-2.5 bg-white border border-gov-border rounded">
+<span class="text-[11px] text-slate-500 block">Toll-Free Grievance Call Centre</span>
+<span class="text-base font-bold font-mono text-primary">1800-425-2484</span>
+<span class="text-[11px] text-slate-500 block mt-0.5">Mon - Sat | 08:00 AM - 08:00 PM</span>
+</div>
+<div class="text-slate-600">
+            Email: <span class="font-medium text-slate-800">grievances.municipality@tn.gov.in</span>
+</div>
+</div>
+<!-- Col 4: Administrative SSO -->
+<div class="space-y-2">
+<h4 class="font-bold text-primary text-xs uppercase tracking-wide">Department Access</h4>
+<p class="text-slate-600 leading-normal">
+            Authorized portal login for Municipal Commissioners, Assistant Engineers, and Sanitary Officers.
+          </p>
+<a class="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline pt-1" data-path="officer-overview" href="#">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            Official Staff Single Sign-On (SSO)
+          </a>
+</div>
+</div>
+</div>
+<!-- Subfooter / Disclaimer -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+<div>
+        © 2025 Municipal Administration &amp; Water Supply Department, Government of Tamil Nadu.
+        <span class="text-slate-400 block sm:inline sm:ml-1">Demonstration portal for public grievance administration.</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Accessibility Statement</a>
+<a class="hover:text-primary transition-colors" href="#">Security Audit</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Demo Handler -->
+<script>
+    function handleTrackDemo(event) {
+      event.preventDefault();
+      const input = document.getElementById('complaintRefInput');
+      const resultBox = document.getElementById('quickTrackResult');
+      const displayRef = document.getElementById('displayRefNumber');
+
+      if (input && input.value.trim() !== '') {
+        displayRef.textContent = input.value.trim().toUpperCase();
+        resultBox.classList.remove('hidden');
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+</body></html>

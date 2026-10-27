@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter,+Noto+Sans+Tamil,+system-ui,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#1f3242","error-container":"#ffdad6","secondary-container":"#76b8fe","on-secondary-fixed-variant":"#00497c","tertiary":"#002c10","background":"#f6f9ff","on-tertiary":"#ffffff","on-surface-variant":"#43474f","surface-bright":"#f6f9ff","secondary-fixed":"#d1e4ff","on-tertiary-fixed-variant":"#005323","on-primary-fixed":"#001b3c","surface-container-low":"#ecf5ff","surface-container":"#e1f0ff","on-background":"#081d2c","tertiary-container":"#00451c","inverse-on-surface":"#e6f2ff","tertiary-fixed":"#88faa0","on-error-container":"#93000a","on-tertiary-fixed":"#00210a","surface-container-highest":"#d0e5f9","primary-fixed-dim":"#a8c8ff","outline-variant":"#c3c6d0","on-primary-container":"#84a6df","on-secondary":"#ffffff","tertiary-fixed-dim":"#6cdd86","primary-fixed":"#d5e3ff","on-secondary-fixed":"#001d36","on-primary-fixed-variant":"#22477a","on-secondary-container":"#00487a","on-surface":"#081d2c","secondary-fixed-dim":"#9dcaff","error":"#ba1a1a","inverse-primary":"#a8c8ff","primary":"#00254e","on-tertiary-container":"#48ba68","on-error":"#ffffff","surface":"#f6f9ff","surface-container-high":"#d6ebff","outline":"#737780","secondary":"#0261a2","surface-variant":"#d0e5f9","on-primary":"#ffffff","primary-container":"#123b6d","surface-dim":"#c8dcf0","surface-tint":"#3c5f93","surface-container-lowest":"#ffffff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","space-2xl":"3rem",margin:"1rem","gutter-desktop":"1.5rem","space-md":"1rem",gutter:"1rem","margin-desktop":"2rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"title-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],display:["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"title-lg":["16px",{lineHeight:"22px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="bg-surface-container-low border-b border-surface-container-high"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop h-8 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><div><span class="font-label-md font-semibold text-primary">தமிழ்நாடு அரசு</span> | Government of Tamil Nadu — Municipal Digital Public Grievance Portal</div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="text-on-surface-variant">Font:</span><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface">A-</button><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface font-semibold">A</button><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface">A+</button></div><span class="text-outline-variant">|</span><button class="hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">contrast</span> High Contrast</button><span class="text-outline-variant">|</span><button class="hover:text-primary font-label-md font-semibold text-secondary">தமிழ்</button></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="CivicTrack Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V_5Wz38xFUOpi-rh_D5u0SlsT5K4lhMlHdjD90nkUcq7pW83oM_moVYGqb6vN0e5rWafs4TJ76gYB0OaU2CZaCDgvt0LC4y1GkQDXa-bLU9jcgAgijqz7G05ldvUJxModUcSRXGYXBndfsHBYmyMh1e70xFg0kCQ8F5qOtpXg8OCX9SmYYGVnQgYekiZ662S6IeyrENY_-whcMw5XnCx_HRAlhZ7ATLXbWj2_1fyw6YPz7y26haVd0UHA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">CivicTrack TN</span><span class="font-label-sm text-label-sm text-on-surface-variant">நகராட்சி குறைதீர்ப்பு சேவை / Public Grievance Redressal</span></div></div><nav class="hidden xl:flex items-center gap-space-sm font-label-lg text-label-lg" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg"><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="submit-complaint" href="#">Submit Complaint</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-surface-container-high text-primary font-semibold rounded-lg" data-path="track-complaint" href="#">Track Complaint</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="citizen-dashboard" href="#">Citizen Dashboard</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="help-faq" href="#">Help & FAQ</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center px-space-md py-2 rounded font-label-md text-label-md text-secondary hover:bg-secondary-fixed/40 transition-colors font-semibold" data-path="login" href="#">Citizen Login</a><a class="inline-flex items-center px-space-md py-2 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm font-semibold" data-path="officer-overview" href="#">Officer Control Room</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Search & Tracking Header Bar -->
+<section class="w-full bg-surface-container-low py-space-lg shadow-sm">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-semibold">Grievance Redressal Tracking • புகார் கண்காணிப்பு</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mt-1">Live Civic Status Tracker</p>
+</div>
+<!-- Quick Reference Search & Receipt Action -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative flex-1 sm:w-80">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">pin</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-lowest text-on-surface font-label-lg text-label-lg rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary uppercase tracking-wide placeholder:text-outline" id="refInput" placeholder="Enter Grievance Reference (e.g. TN-...)" type="text" value="TN-TRY-2025-08492"/>
+</div>
+<button class="px-space-md py-2.5 rounded bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-all shadow-sm flex items-center gap-2 font-semibold" id="trackBtn" onclick="triggerSearchFeedback()">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+<span>Search Status</span>
+</button>
+<button class="px-space-md py-2.5 rounded bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm flex items-center gap-2 font-semibold" onclick="window.print()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="hidden sm:inline">Print Receipt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout -->
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-space-xl space-y-space-xl">
+<!-- Complaint Summary Dossier Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg lg:p-space-xl relative overflow-hidden">
+<!-- Institutional watermarking band -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-primary-container to-secondary-container"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg">
+<div class="space-y-space-sm flex-1">
+<!-- Reference & Metadata Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded font-label-lg text-label-lg text-primary font-bold">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+<span id="complaintRef">TN-TRY-2025-08492</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container font-label-sm text-label-sm text-secondary font-semibold transition-colors flex items-center gap-1" id="copyRefBtn" onclick="copyReferenceId()">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copyBtnText">Copy ID</span>
+</button>
+<span class="px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+              Water Supply (குடிநீர் வழங்கல்)
+            </span>
+<span class="px-3 py-1 rounded bg-error-container text-on-error-container font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+              High Priority (உயர் முன்னுரிமை)
+            </span>
+</div>
+<!-- Grievance Title & Tamil Translation -->
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary font-bold">
+              Broken water distribution valve causing potable water wastage and road inundation
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              குடிநீர் விநியோக வால்வு உடைந்து குடிநீர் வீணாகி சாலையில் தேங்கி நிற்கிறது
+            </p>
+</div>
+<!-- Contextual Meta Info Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2 bg-surface-container-low p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">location_city</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Municipal Jurisdiction</span>
+<span>Tiruchirappalli City Municipal Corp.</span>
+<span class="text-outline text-label-sm block">Zone II • Ward 28 (Thillai Nagar East)</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low p-space-sm rounded">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">schedule</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Timeline & SLA Deadline</span>
+<span>Filed: 24 Oct 2025, 09:30 AM</span>
+<span class="text-tertiary-container font-semibold block text-label-sm">Due: 26 Oct 2025, 05:00 PM (On track)</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low p-space-sm rounded sm:col-span-2 lg:col-span-1">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">engineering</span>
+<div>
+<span class="font-label-md text-label-md text-primary block font-semibold">Assigned Ward Engineer</span>
+<span class="text-on-surface font-medium">Er. R. Senthil Nathan</span>
+<span class="text-outline text-label-sm block">AEE Water Works (Extn: 412)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Status Hero Badge Pill -->
+<div class="flex flex-col sm:items-end justify-between self-stretch shrink-0 bg-surface-container-low p-space-md rounded-lg">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase text-outline block sm:text-right">Current Redressal Status</span>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg font-bold shadow-sm">
+<svg class="animate-spin -ml-1 mr-1 h-4 w-4 text-on-secondary-container" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>In Progress / பணியில் உள்ளது</span>
+</div>
+</div>
+<div class="mt-space-md sm:mt-0 flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+<span>Civic SLA: 48 Hours Guarantee</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Redressal Lifecycle Timeline -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg lg:p-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md mb-space-lg bg-surface-container-low -mx-space-lg lg:-mx-space-xl -mt-space-lg lg:-mt-space-xl p-space-lg rounded-t-xl gap-2">
+<div>
+<h2 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">alt_route</span>
+            Redressal Lifecycle & Audit Trail (குறைதீர்ப்பு படிநிலைகள்)
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            End-to-end transparent municipal dispatch log verified via timestamped telemetry.
+          </p>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest font-label-sm text-label-sm text-primary font-semibold self-start sm:self-auto">
+          Phase 4 of 6 Active
+        </span>
+</div>
+<!-- Horizontal / Vertical Responsive Stepper -->
+<div class="relative py-2">
+<div class="grid grid-cols-1 md:grid-cols-6 gap-space-md relative">
+<!-- Node 1: Submitted -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary-container flex items-center justify-center font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">done_all</span>
+</div>
+<div class="w-0.5 h-12 bg-tertiary-fixed md:hidden my-1"></div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-primary font-bold block">1. Submitted</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">சமர்ப்பிக்கப்பட்டது</span>
+<span class="font-label-sm text-label-sm text-outline block">24 Oct, 09:30 AM</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Citizen App</span>
+</div>
+</div>
+<!-- Node 2: Verified & Screened -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary-container flex items-center justify-center font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="w-0.5 h-12 bg-tertiary-fixed md:hidden my-1"></div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-primary font-bold block">2. Screened</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">சரிபார்க்கப்பட்டது</span>
+<span class="font-label-sm text-label-sm text-outline block">24 Oct, 11:15 AM</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Desk Officer #09</span>
+</div>
+</div>
+<!-- Node 3: Assigned to Department -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary-container flex items-center justify-center font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div class="w-0.5 h-12 bg-secondary md:hidden my-1"></div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-primary font-bold block">3. Assigned</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">துறைக்கு ஒதுக்கப்பட்டது</span>
+<span class="font-label-sm text-label-sm text-outline block">24 Oct, 02:40 PM</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Ward 28 Gang</span>
+</div>
+</div>
+<!-- Node 4: Field Inspection & In Progress (CURRENT ACTIVE) -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm relative">
+<div class="flex flex-col items-center">
+<div class="relative w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold shadow-md">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+<span class="absolute -top-1 -right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+</div>
+<div class="w-0.5 h-12 bg-surface-container md:hidden my-1"></div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-secondary font-bold block">4. In Progress</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold block">பணியில் உள்ளது</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">25 Oct, 08:20 AM</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Active On-Site</span>
+</div>
+</div>
+<!-- Node 5: Resolution & Photo Proof (UPCOMING) -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm opacity-60">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container text-outline flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+</div>
+<div class="w-0.5 h-12 bg-surface-container md:hidden my-1"></div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold block">5. Resolution</span>
+<span class="font-label-sm text-label-sm text-outline block">தீர்வு & புகைப்படம்</span>
+<span class="font-label-sm text-label-sm text-outline block">Est: 25 Oct, 04:00 PM</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">Pending Work</span>
+</div>
+</div>
+<!-- Node 6: Citizen Confirmation & Closure (UPCOMING) -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-space-sm opacity-60">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container text-outline flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+</div>
+<div class="md:text-center space-y-0.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold block">6. Closure</span>
+<span class="font-label-sm text-label-sm text-outline block">முடிவுறுதல்</span>
+<span class="font-label-sm text-label-sm text-outline block">Citizen OTP / Sign-off</span>
+<span class="inline-block mt-1 px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm">Final Phase</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Current Action Note Callout -->
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start gap-space-md">
+<div class="p-2 rounded bg-secondary-fixed text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="font-title-lg text-title-lg text-primary font-bold">Latest Operational Update from Site</span>
+<span class="font-label-sm text-label-sm text-outline">Logged: 25 Oct 2025, 08:20 AM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+            "Field maintenance crew on site replacing 150mm Cast Iron pipeline sluice valve and flange gasket along 4th Cross Road. Water supply throttled during repair window. Expected complete restoration by 25 Oct, 4:00 PM."
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            — Er. R. Senthil Nathan, Assistant Executive Engineer, Ward 28 Redressal Squad.
+          </p>
+</div>
+</div>
+</div>
+<!-- Two-Column Lower Details Area -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- LEFT COLUMN: Public Updates Log & Resolution Proof (7 cols) -->
+<div class="lg:col-span-7 space-y-space-xl">
+<!-- Inspection Photographs Comparison -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<h3 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_library</span>
+              Site Photographic Evidence (தள புகைப்படங்கள்)
+            </h3>
+<span class="font-label-sm text-label-sm text-outline">Geo-tagged coordinates</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-2">
+<!-- Photo 1: Citizen Submission -->
+<div class="space-y-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="relative overflow-hidden rounded h-52 bg-surface-container">
+<img class="w-full h-full object-cover rounded" data-alt="A municipal road corner in Tamil Nadu with water overflowing from an underground cracked cast iron pipeline valve. Water accumulates creating puddles around the concrete sidewalk under morning tropical light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhhdZDE6xx4vNW_RblpRIVzjTH76J0blmgqpPGMPV1vXdma4JRObY2L9XiwTGa0TcknCvbPfutAqboK0iS1tn-RS40Cer9hIHQ0IaGlxifyrEIG0ab4IOyZ0Z2UeuaZLkVag14UflunIaQHPKt8EVmRscqWSI33zHmpShT5NaHnCcU4uyW4mWrwy6_9umIuoJy9X7VsnOIr7X1Am4zSZMZVuXfZEh1SV8ZMc_bNMU7e4cj5QI6P0dS"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+                  Citizen Submission
+                </span>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 text-on-surface font-label-sm text-label-sm backdrop-blur-sm">
+                  24 Oct 2025 • 09:28 AM
+                </span>
+</div>
+<div class="px-1">
+<p class="font-label-md text-label-md text-primary font-semibold">Initial Defect Photo</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4th Cross, Thillai Nagar East. Leakage at sub-distribution valve.</p>
+</div>
+</div>
+<!-- Photo 2: Live On-Site Work Progress -->
+<div class="space-y-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="relative overflow-hidden rounded h-52 bg-surface-container">
+<img class="w-full h-full object-cover rounded" data-alt="Municipal utility workers in high-visibility safety jackets working inside a shallow excavated trench repairing a cast iron water sluice valve with wrenches and replacement rubber gaskets on an asphalt street in daytime." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9b_BeNFIiskVH_CZWIBCt5LpSz7SDMSo-kXfrBRt-4jWT45-gsVRhXfx0gLMqDYA6WJBzAP8CTWtG23BQmglvcCL0p-R6dWZLXX3AuPvNxITLtRbEQBOKnJC_4Jd1_twK2vh1euhIGgKbJNQEfkk4f8FHTKsjWb57E7upfx4xm7-6K1zGcX7Siwo6V1V-_Y76DnWVJhNggUdRWWZF4flMOA5uTTw_EjBFHyDoLx6lZF05jo-u3Z1W"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold backdrop-blur-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                  Active Repair Photo
+                </span>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 text-on-surface font-label-sm text-label-sm backdrop-blur-sm">
+                  25 Oct 2025 • 08:35 AM
+                </span>
+</div>
+<div class="px-1">
+<p class="font-label-md text-label-md text-primary font-semibold">Maintenance In-Progress</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Excavation complete; valve flange replacement underway.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high/40 p-space-sm rounded text-label-sm font-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">satellite_alt</span>
+<span>GPS Location Verified: 10.8288° N, 78.6856° E (Ward 28 Engineering Registry Validated)</span>
+</div>
+</div>
+<!-- Municipal Inspection Audit Log -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<h3 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+              Municipal Action Log (அரசு செயல்பாட்டு குறிப்புகள்)
+            </h3>
+<span class="font-label-sm text-label-sm text-outline">Real-time ledger</span>
+</div>
+<div class="space-y-space-sm pt-2">
+<!-- Log Entry 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between flex-wrap gap-1 font-label-sm text-label-sm">
+<span class="font-bold text-primary">Crew Dispatched with Replacement Spares</span>
+<span class="text-outline">25 Oct 2025 | 07:45 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Material Indent No: M-TRY-4819 cleared from Cantonment Central Water Stores. Team dispatched under Junior Engineer K. Murugan.
+              </p>
+</div>
+<!-- Log Entry 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between flex-wrap gap-1 font-label-sm text-label-sm">
+<span class="font-bold text-primary">Ward Inspection & Work Order Sanctioned</span>
+<span class="text-outline">24 Oct 2025 | 03:10 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Preliminary inspection confirmed rupture on 150mm sluice joint. Road safety barricading ordered and temporary feeder line bypassed.
+              </p>
+</div>
+<!-- Log Entry 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between flex-wrap gap-1 font-label-sm text-label-sm">
+<span class="font-bold text-primary">Citizen Grievance Registered and Token Generated</span>
+<span class="text-outline">24 Oct 2025 | 09:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Grievance received through CivicTrack Web Portal from registered mobile (+91 94432-XXXXX). Automated SMS acknowledgement delivered.
+              </p>
+</div>
+</div>
+</div>
+<!-- Geo-Location Map Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">pin_drop</span>
+              Incident Geospatial Coordinates
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Ward 28 - Thillai Nagar East</span>
+</div>
+<div class="w-full h-56 rounded-lg bg-cover bg-center shadow-inner relative flex items-end p-space-sm" data-location="Thillai Nagar, Tiruchirappalli, Tamil Nadu, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQzQoGmPlTOUVVeAf9eLsWKYmmnjh1qZpIR3711qsaJk3BGPFeReuLHl13p94MkKfBuumxzvk5v64d7Tvsx6JBriBGMdA0dcdEHH2gyk9enw7QFzstu48xEJ_-gHWovhyuGyt86LAByP-9YsMFbfSfmHMZK0IkX5TgYT0KTS75tmu9dYlUaIAbf_wsfHs7xLX53x0O4dba1tEByWOwpNJKyMhyCkiOZIhWKgF5FLgRm0w2wPERmls_')">
+<div class="bg-surface/90 backdrop-blur-md p-space-sm rounded text-label-sm font-label-sm text-on-surface shadow-sm max-w-sm">
+<div class="font-bold text-primary">Ward Redressal Zone: Central Trichy</div>
+<div class="text-on-surface-variant">4th Cross Road junction, Thillai Nagar East, Trichy - 620018</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Grievance Info Card & Escalation Details (5 cols) -->
+<div class="lg:col-span-5 space-y-space-xl">
+<!-- Quick Official Actions Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<h3 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">download_for_offline</span>
+            Citizen Documents & Actions
+          </h3>
+<div class="space-y-space-sm">
+<button class="w-full p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between group text-left" id="downloadBtn" onclick="downloadReceiptMock()">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block group-hover:text-secondary">Official Acknowledgement Slip</span>
+<span class="font-label-sm text-label-sm text-outline">Receipt #TN-TRY-08492.pdf (142 KB)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">download</span>
+</button>
+<button class="w-full p-space-sm rounded bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between group text-left" id="smsAlertBtn" onclick="subscribeSmsMock()">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block group-hover:text-secondary">SMS Status Subscription</span>
+<span class="font-label-sm text-label-sm text-outline">Active on phone: 94432-XXXXX</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">check_circle</span>
+</button>
+</div>
+</div>
+<!-- SLA & Escalation Ladder Details -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<h3 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+              SLA Guarantees & Escalation
+            </h3>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Tier 1 Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Under the Tamil Nadu Right to Public Grievance Charter, drinking water complaints must be inspected within 12 hours and resolved within 48 hours.
+          </p>
+<!-- Escalation Hierarchy -->
+<div class="space-y-space-xs font-body-sm text-body-sm">
+<!-- Tier 1 -->
+<div class="p-space-sm rounded bg-secondary-fixed/30 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">Level 1: Ward Assistant Executive Engineer</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Active Handling</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface">Er. R. Senthil Nathan</p>
+<p class="font-label-sm text-label-sm text-outline">Direct Desk: 0431-2412891 (Ext. 412) | senthil.water@trichycorp.gov.in</p>
+</div>
+<!-- Tier 2 (Next Escalation) -->
+<div class="p-space-sm rounded bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Level 2: Zonal Executive Engineer (Zone II)</span>
+<span class="font-label-sm text-label-sm text-outline">Escalates after 26 Oct, 5:00 PM</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface">Er. M. Kalyanasundaram</p>
+<p class="font-label-sm text-label-sm text-outline">Zonal Helpline: 0431-2410314</p>
+</div>
+<!-- Tier 3 (Commissioner's Grievance Cell) -->
+<div class="p-space-sm rounded bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Level 3: Commissioner's Redressal Cell</span>
+<span class="font-label-sm text-label-sm text-outline">Apex Municipal Tier</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface">Tiruchirappalli Corporation Central HQ</p>
+<p class="font-label-sm text-label-sm text-outline">Toll-Free Escalation: 1800-425-2484</p>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="w-full py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-2" id="raiseEscalationBtn" onclick="promptEscalation()">
+<span class="material-symbols-outlined text-[18px]">report_problem</span>
+              Request Expedited Escalation (அவசர கோரிக்கை)
+            </button>
+</div>
+</div>
+<!-- Citizen Confirmation & Feedback Form (Active Preview) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<h3 class="font-title-lg text-title-lg text-primary font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">rate_review</span>
+              Citizen Feedback & Closure
+            </h3>
+<span class="font-label-sm text-label-sm text-outline">Post-resolution</span>
+</div>
+<div class="space-y-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Once the municipal crew completes the pipeline repair, you will receive an OTP code to verify ground satisfaction.
+            </p>
+<!-- Star Rating Micro-Widget -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-1">
+                Field Work Satisfaction Rating:
+              </label>
+<div class="flex items-center gap-1" id="starRatingContainer">
+<button class="star-btn p-1 text-outline hover:text-secondary focus:outline-none" onclick="setRating(1)" type="button">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</button>
+<button class="star-btn p-1 text-outline hover:text-secondary focus:outline-none" onclick="setRating(2)" type="button">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</button>
+<button class="star-btn p-1 text-outline hover:text-secondary focus:outline-none" onclick="setRating(3)" type="button">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</button>
+<button class="star-btn p-1 text-outline hover:text-secondary focus:outline-none" onclick="setRating(4)" type="button">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</button>
+<button class="star-btn p-1 text-outline hover:text-secondary focus:outline-none" onclick="setRating(5)" type="button">
+<span class="material-symbols-outlined text-[24px]">star</span>
+</button>
+<span class="ml-2 font-label-sm text-label-sm text-outline font-medium" id="ratingCaption">Select rating</span>
+</div>
+</div>
+<!-- Citizen Remarks -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-1" for="feedbackRemarks">
+                Your Remarks / உங்கள் கருத்து:
+              </label>
+<textarea class="w-full p-2.5 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded focus:outline-none focus:ring-2 focus:ring-secondary placeholder:text-outline resize-none" id="feedbackRemarks" placeholder="Share feedback on resolution speed, water pressure restored, or road clearance..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-space-sm pt-1">
+<button class="flex-1 py-2.5 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-1.5" id="submitFeedbackBtn" onclick="submitCitizenFeedback()">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Feedback & Verify OTP</span>
+</button>
+</div>
+<p class="hidden text-label-sm font-label-sm text-tertiary-container font-semibold flex items-center gap-1 mt-1" id="feedbackAlert">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Thank you! Feedback recorded for Ward 28 Redressal Audit.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary-fixed" id="toastIcon">info</span>
+<span id="toastMessage">Action completed successfully</span>
+</div>
+</div>
+</div>
+<script>
+  function showToast(message, iconName = 'check_circle') {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+    const toastIcon = document.getElementById('toastIcon');
+    
+    if (!toast || !toastMsg) return;
+    toastMsg.textContent = message;
+    toastIcon.textContent = iconName;
+    
+    toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+    }, 3200);
+  }
+
+  function copyReferenceId() {
+    const ref = document.getElementById('complaintRef').textContent.trim();
+    navigator.clipboard.writeText(ref).then(() => {
+      const btnText = document.getElementById('copyBtnText');
+      if (btnText) {
+        btnText.textContent = 'Copied!';
+        setTimeout(() => { btnText.textContent = 'Copy ID'; }, 2000);
+      }
+      showToast('Reference ID ' + ref + ' copied to clipboard!', 'content_copy');
+    }).catch(() => {
+      showToast('Copied: ' + ref);
+    });
+  }
+
+  function triggerSearchFeedback() {
+    const inputVal = document.getElementById('refInput').value.trim();
+    if (!inputVal) {
+      showToast('Please enter a valid complaint reference token', 'warning');
+      return;
+    }
+    showToast('Refreshed data for ' + inputVal.toUpperCase(), 'sync');
+  }
+
+  function downloadReceiptMock() {
+    showToast('Official Acknowledgement Slip (PDF) downloading...', 'picture_as_pdf');
+  }
+
+  function subscribeSmsMock() {
+    showToast('SMS notifications re-confirmed for mobile +91 94432-XXXXX', 'sms');
+  }
+
+  function promptEscalation() {
+    const confirmEsc = confirm('This complaint SLA is currently within limits (Due: 26 Oct). Do you still wish to submit an emergency escalation flag to Zone II Executive Engineer?');
+    if (confirmEsc) {
+      showToast('Emergency flag sent to Zonal Executive Engineer!', 'priority_high');
+      const btn = document.getElementById('raiseEscalationBtn');
+      if (btn) {
+        btn.textContent = 'Escalation Notice Dispatched (Level 2 Alerted)';
+        btn.classList.add('bg-error-container', 'text-on-error-container');
+        btn.disabled = true;
+      }
+    }
+  }
+
+  let selectedRating = 0;
+  function setRating(val) {
+    selectedRating = val;
+    const buttons = document.querySelectorAll('.star-btn');
+    const captions = ['Very Poor', 'Poor', 'Average', 'Satisfactory', 'Excellent'];
+    buttons.forEach((btn, idx) => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (idx < val) {
+        btn.classList.remove('text-outline');
+        btn.classList.add('text-secondary');
+        icon.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+      } else {
+        btn.classList.add('text-outline');
+        btn.classList.remove('text-secondary');
+        icon.removeAttribute('style');
+      }
+    });
+    const cap = document.getElementById('ratingCaption');
+    if (cap) {
+      cap.textContent = captions[val - 1] + ' (' + val + '/5)';
+      cap.classList.remove('text-outline');
+      cap.classList.add('text-primary');
+    }
+  }
+
+  function submitCitizenFeedback() {
+    const remarks = document.getElementById('feedbackRemarks').value;
+    const alertBox = document.getElementById('feedbackAlert');
+    const btn = document.getElementById('submitFeedbackBtn');
+    
+    if (alertBox) {
+      alertBox.classList.remove('hidden');
+    }
+    if (btn) {
+      btn.textContent = 'Feedback Logged ✓';
+      btn.disabled = true;
+      btn.classList.add('opacity-75');
+    }
+    showToast('Citizen confirmation & rating registered successfully!', 'thumb_up');
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-space-2xl border-t border-surface-container"><div class="bg-surface-container-low py-space-xl"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-space-xl"><div class="space-y-space-sm md:col-span-1"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[28px]">account_balance</span><span class="font-headline-sm text-headline-sm text-primary font-bold">CivicTrack TN</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">The unified municipal governance & digital complaint management pipeline for local urban and panchayat administration in Tamil Nadu.</p><div class="font-label-sm text-label-sm text-outline">Unified Civic Engine v2.4 (Govt. of TN Standard)</div></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Citizen Services</h3><ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="submit-complaint" href="#">Register Grievance / புதிய புகார்</a></li><li><a class="hover:text-primary transition-colors" data-path="track-complaint" href="#">Track Status / நிலை அறிதல்</a></li><li><a class="hover:text-primary transition-colors" data-path="citizen-charter" href="#">Citizen Charter & Timelines</a></li><li><a class="hover:text-primary transition-colors" data-path="ward-contacts" href="#">Know Your Ward Officer</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Central Helpline</h3><div class="p-space-sm rounded bg-surface-container-high/50 border border-surface-container"><p class="font-label-sm text-label-sm text-on-surface-variant">Toll-Free Grievance Cell</p><p class="font-title-lg text-title-lg font-bold text-primary">1800-425-2484</p><p class="font-body-sm text-body-sm text-on-surface-variant">Mon - Sat | 08:00 AM - 08:00 PM</p></div><p class="font-body-sm text-body-sm text-on-surface-variant">Email: grievances.municipality@tn.gov.in</p></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Administrative Access</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Restricted access for designated Municipal Commissioners, Ward Engineers, and Sanitary Inspectors.</p><a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary font-semibold hover:underline" data-path="officer-overview" href="#"><span class="material-symbols-outlined text-[16px]">lock</span> Staff Single Sign-On (SSO)</a></div></div></div><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div>© 2025 Municipal Administration & Water Supply Department, Govt. of Tamil Nadu. <span class="text-outline">Demonstration System for Municipal Redressal Management.</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Citizen Charter</a><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Statement</a><a class="hover:text-primary transition-colors" data-path="security-audit" href="#">Audit & Compliance</a></div></div></footer></body></html>

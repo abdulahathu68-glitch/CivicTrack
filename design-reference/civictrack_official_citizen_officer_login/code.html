@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary-fixed-variant":"#22477a","surface":"#f6f9ff","on-primary-container":"#84a6df","on-primary-fixed":"#001b3c","tertiary-fixed":"#88faa0","on-secondary":"#ffffff","secondary-container":"#76b8fe","surface-container-lowest":"#ffffff","on-surface-variant":"#43474f","on-error-container":"#93000a","on-secondary-fixed-variant":"#00497c","inverse-primary":"#a8c8ff","secondary-fixed-dim":"#9dcaff","tertiary":"#002c10","surface-container-low":"#ecf5ff","secondary":"#0261a2","on-tertiary-fixed-variant":"#005323","primary":"#00254e","surface-variant":"#d0e5f9","primary-container":"#123b6d","on-tertiary":"#ffffff","on-error":"#ffffff","primary-fixed":"#d5e3ff","tertiary-fixed-dim":"#6cdd86","surface-tint":"#3c5f93","surface-container-high":"#d6ebff","on-tertiary-fixed":"#00210a","secondary-fixed":"#d1e4ff","background":"#f6f9ff","surface-container-highest":"#d0e5f9","error-container":"#ffdad6","error":"#ba1a1a","on-surface":"#081d2c","on-background":"#081d2c","on-primary":"#ffffff","surface-dim":"#c8dcf0","on-tertiary-container":"#48ba68","on-secondary-fixed":"#001d36","on-secondary-container":"#00487a","outline":"#737780","inverse-surface":"#1f3242","surface-bright":"#f6f9ff","inverse-on-surface":"#e6f2ff","outline-variant":"#c3c6d0","primary-fixed-dim":"#a8c8ff","surface-container":"#e1f0ff","tertiary-container":"#00451c"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-2xl":"3rem","margin-desktop":"2rem","space-md":"1rem","space-lg":"1.5rem",gutter:"1rem","space-xl":"2rem","space-xs":"0.25rem","gutter-desktop":"1.5rem",margin:"1rem","space-sm":"0.5rem"},fontFamily:{"label-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],display:["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"title-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""]},fontSize:{"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-lg":["16px",{lineHeight:"22px",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter,+Noto+Sans+Tamil,+system-ui,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop h-8 flex items-center justify-between font-label-sm text-label-sm"><div class="flex items-center gap-space-sm"><span class="opacity-90">Government of Tamil Nadu — Municipal Grievance Redressal Portal</span><span class="opacity-40 hidden sm:inline">|</span><span class="opacity-75 hidden sm:inline">தமிழ்நாடு அரசு</span></div><div class="flex items-center gap-space-md"><div aria-label="Text size controls" class="flex items-center gap-space-xs font-semibold"><button class="px-1 hover:text-secondary-fixed transition-colors" title="Decrease Font" type="button">A-</button><button class="px-1 hover:text-secondary-fixed transition-colors" title="Standard Font" type="button">A</button><button class="px-1 hover:text-secondary-fixed transition-colors" title="Increase Font" type="button">A+</button></div><span class="opacity-40">|</span><div class="flex items-center gap-space-xs"><button class="px-1 hover:text-secondary-fixed transition-colors" title="Standard Contrast" type="button"><span class="material-symbols-outlined text-[14px]">contrast</span></button></div><span class="opacity-40">|</span><button class="hover:text-secondary-fixed transition-colors font-medium" type="button">தமிழ்</button></div></div></div><div class="h-16 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="CivicTrack City Map Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uy5hVXTMJAX3ekJThz8l4PpV2lM5nqrcUBQLE2l9AOK6AgEoy8t-cDOFKNUEbw2KwKt2lhQzpxZ1MrnxERkLcx1KvVdTzjJkggHrOCN1YDlAxIZ8Jo7VJfHIITkNeSakXHpY1oijUbyWmOYeTO0OxbP6b_w8blZUnDpe_tQ5txc20SFT2sHuGg1WKjoPU61VHw9yudCrmbFWGo_rH3ZGcoS52p46suND-3ClYNqPN3SuymDdBQKfuGfHEVJEg4VMHmiC_kZhamTg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">CivicTrack</span><span class="font-label-sm text-label-sm text-on-surface-variant -mt-1">TN Municipal Governance Suite</span></div></div><div class="flex items-center gap-space-lg"><nav class="hidden sm:flex items-center gap-space-md" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-1 rounded transition-colors" data-path="citizen-portal" href="#">Back to Home</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-1 rounded transition-colors" data-path="officer-login" href="#">Officer Portal</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-1 rounded transition-colors" data-path="status-tracking" href="#">Track Status</a></nav><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><div class="hidden md:flex flex-col text-right"><span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[13px]">lock</span> 256-bit SSL</span><span class="font-label-sm text-label-sm text-on-surface-variant">Demographic Gateway</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><div class="bg-surface-container-high/60"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-1 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-secondary"></span><span>Secure Municipal Redressal Gateway • Authorized Personnel & Registered Citizens Only</span></div><span class="font-medium text-secondary">Portal Demo Instance</span></div></div></header><main class="w-full pt-24 bg-surface min-h-[calc(100vh-140px)] flex flex-col justify-center"><div class="flex flex-col w-full">
+<div class="relative w-full py-space-xl px-margin lg:px-margin-desktop flex items-center justify-center overflow-hidden">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-[1040px] grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch z-10">
+<!-- Left Contextual Institutional Dossier Panel (Desktop 5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between p-space-xl bg-primary text-on-primary rounded-xl shadow-md relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-sm bg-primary-container/80 px-space-md py-1 rounded w-fit">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">assured_workload</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary-fixed">TN-ULB Grievance Grid</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-primary">
+              Unified Civic Redressal
+            </h1>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+              தமிழ்நாடு நகராட்சி நிர்வாகம் & குடிநீர் வழங்கல் துறை
+            </p>
+<p class="font-body-md text-body-md text-surface-variant mt-space-sm leading-relaxed">
+              Official demographic gateway serving 21 Municipal Corporations, 138 Municipalities, and 489 Town Panchayats.
+            </p>
+</div>
+<!-- Realtime SLA & Civic Metric Widget -->
+<div class="bg-primary-container/60 p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md text-on-primary">
+<span class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+                Active SLA Fulfillment Rate
+              </span>
+<span class="font-bold text-tertiary-fixed">94.8%</span>
+</div>
+<div class="w-full bg-primary/80 h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed h-full rounded-full" style="width: 94.8%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-primary-container">
+<span>Average Resolution: 72 hrs</span>
+<span>Tamil Nadu Municipal Act, 1920</span>
+</div>
+</div>
+<!-- Feature Bullets -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="p-1 bg-primary-container rounded text-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-primary">Immutable Tracking Tokens</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">SMS-verified acknowledgement for every grievance lodged</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="p-1 bg-primary-container rounded text-secondary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">pin_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-primary">Ward-Level Desk Routing</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Direct escalation to Assistant Executive Engineers (AEE)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Verification Seal -->
+<div class="relative z-10 pt-space-lg flex items-center justify-between font-label-sm text-label-sm text-on-primary-container">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed">security</span>
+            WCAG 2.2 AA Verified
+          </span>
+<span>ISO 27001 Certified Gateway</span>
+</div>
+</div>
+<!-- Right Main Interactive Authentication Card (Desktop 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<!-- Card Header & Badge -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_balance</span>
+<span>தமிழ்நாடு நகராட்சி நிர்வாகம் / TN Municipal Administration</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-low text-secondary font-semibold" id="tier-badge">
+<span class="material-symbols-outlined text-[14px]">public</span>
+<span>Citizen Tier</span>
+</div>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-space-sm" id="form-heading">
+              Welcome Back / நல்வரவு
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant" id="form-subheading">
+              Sign in to report civic issues or track your complaints across Tamil Nadu Urban Local Bodies.
+            </p>
+</div>
+<!-- Citizen Form Container -->
+<form class="mt-space-lg flex flex-col gap-space-md" id="citizen-auth-form" onsubmit="event.preventDefault();">
+<!-- Mobile/Email Input -->
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-identifier">
+                  Mobile Number or Email Address / கைபேசி எண் அல்லது மின்னஞ்சல்
+                </label>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">contact_phone</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:bg-surface-container-lowest focus:outline-2 focus:outline-secondary focus:outline-offset-1 transition-all" id="citizen-identifier" name="citizen-identifier" placeholder="e.g., 9876543210 or resident@tn.gov.in" required="" type="text"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                Enter 10-digit mobile or registered email address
+              </span>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="citizen-password">
+                  Password / கடவுச்சொல்
+                </label>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold transition-colors" href="#">
+                  Forgot Password? / மீட்டெடு
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">lock</span>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:bg-surface-container-lowest focus:outline-2 focus:outline-secondary focus:outline-offset-1 transition-all" id="citizen-password" name="citizen-password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 text-on-surface-variant hover:text-on-surface transition-colors p-1" id="citizen-toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Controls: Remember Me -->
+<div class="flex items-center justify-between pt-space-xs">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 accent-secondary" id="remember-citizen" name="remember-citizen" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Remember Me on this device</span>
+</label>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Protected</span>
+</div>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full h-11 mt-space-xs bg-secondary hover:bg-primary text-on-secondary font-label-lg text-label-lg rounded flex items-center justify-center gap-space-sm shadow-sm transition-all active:scale-[0.99]" type="submit">
+<span>Sign In as Citizen / உள்நுழைக</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Subtle Divider -->
+<div class="relative flex py-space-xs items-center">
+<div class="flex-grow bg-surface-container-high h-[1px]"></div>
+<span class="flex-shrink mx-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+                OR / அல்லது
+              </span>
+<div class="flex-grow bg-surface-container-high h-[1px]"></div>
+</div>
+<!-- Registration Link Block -->
+<div class="text-center font-body-sm text-body-sm text-on-surface-variant">
+<span>New to CivicTrack? / புதியவரா?</span>
+<a class="font-semibold text-secondary hover:text-primary ml-1 underline decoration-secondary decoration-1 underline-offset-2 transition-colors" href="#">
+                Create an Account / பதிவு செய்க
+              </a>
+</div>
+</form>
+<!-- Government Employee Form (Hidden by Default) -->
+<form class="mt-space-lg flex-col gap-space-md hidden" id="officer-auth-form" onsubmit="event.preventDefault();">
+<div class="bg-surface-container p-space-md rounded-lg flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-secondary text-[24px]">badge</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Officer Single-Sign-On (SSO) Portal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authenticate via Government Employee Service Code (IFHRMS / ULB ID)</span>
+</div>
+</div>
+<!-- Employee ID -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="officer-id">
+                Government Employee ID / IFHRMS எண்
+              </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:bg-surface-container-lowest focus:outline-2 focus:outline-primary focus:outline-offset-1 transition-all uppercase" id="officer-id" name="officer-id" placeholder="e.g., TN-ULB-883920" type="text"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                Enter your alphanumeric cadre designation number
+              </span>
+</div>
+<!-- Jurisdiction / Zone Selection -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="officer-zone">
+                Municipal Corporation / Zone / மண்டலம்
+              </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">location_city</span>
+<select class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:bg-surface-container-lowest focus:outline-2 focus:outline-primary focus:outline-offset-1 transition-all appearance-none" id="officer-zone" name="officer-zone">
+<option disabled="" selected="" value="">Select Your Jurisdiction Area</option>
+<option value="gcc">Greater Chennai Corporation (GCC) - All 15 Zones</option>
+<option value="cbe">Coimbatore City Municipal Corporation (CCMC)</option>
+<option value="mdu">Madurai Municipal Corporation</option>
+<option value="try">Tiruchirappalli City Corporation</option>
+<option value="slm">Salem City Municipal Corporation</option>
+<option value="tjr">Thanjavur & Delta ULBs</option>
+<option value="panchayat">Directorate of Town Panchayats (DTP)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 text-on-surface-variant text-[20px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Officer Password / Security Key -->
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="officer-token">
+                  Portal Key / கடவுச்சொல்
+                </label>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold transition-colors" href="#">
+                  Contact Nodal Officer / உதவி
+                </a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">key</span>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-low text-on-surface font-body-md text-body-md rounded focus:bg-surface-container-lowest focus:outline-2 focus:outline-primary focus:outline-offset-1 transition-all" id="officer-token" name="officer-token" placeholder="••••••••••••" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 text-on-surface-variant hover:text-on-surface transition-colors p-1" id="officer-toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Two-factor Token Prompt -->
+<div class="p-space-sm bg-surface-container-low rounded flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">phonelink_lock</span>
+<span class="font-label-sm text-label-sm">Requires m-Seva OTP or NIC Token confirmation</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary">SLA Desk</span>
+</div>
+<!-- Government Action CTA -->
+<button class="w-full h-11 mt-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded flex items-center justify-center gap-space-sm shadow-sm transition-all active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+<span>Officer Secure Sign In / அதிகாரி உள்நுழைவு</span>
+</button>
+</form>
+</div>
+<!-- Demarcated Administrative Panel Switcher -->
+<div class="mt-space-lg pt-space-md border-t border-surface-container-high">
+<div class="p-space-md bg-surface-container-low rounded-lg transition-all duration-200">
+<div class="flex items-start gap-space-sm">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="toggle-gov-mode" type="checkbox"/>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-on-surface font-semibold cursor-pointer" for="toggle-gov-mode">
+                  I am a Government Employee / அரசு அலுவலர் உள்நுழைவு
+                </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+                  Municipal staff and zonal engineers can sign in using their authorized employee credentials.
+                </p>
+</div>
+</div>
+</div>
+<!-- Legal & Support Security Footnote -->
+<div class="mt-space-md flex items-start gap-space-xs text-on-surface-variant/80 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-on-surface-variant flex-shrink-0 mt-0.5">verified</span>
+<p class="leading-tight">
+              Authorized for Tamil Nadu Municipal Corporations, Municipalities, and Town Panchayats. Unauthorised access is prohibited and punishable under IT Act, 2000.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const govCheckbox = document.getElementById('toggle-gov-mode');
+    const citizenForm = document.getElementById('citizen-auth-form');
+    const officerForm = document.getElementById('officer-auth-form');
+    const tierBadge = document.getElementById('tier-badge');
+    const formHeading = document.getElementById('form-heading');
+    const formSubheading = document.getElementById('form-subheading');
+
+    // Toggle Citizen / Officer Forms
+    if (govCheckbox) {
+      govCheckbox.addEventListener('change', function(e) {
+        if (e.target.checked) {
+          citizenForm.classList.add('hidden');
+          officerForm.classList.remove('hidden');
+          officerForm.classList.add('flex');
+          
+          tierBadge.innerHTML = `
+            <span class="material-symbols-outlined text-[14px]">shield_person</span>
+            <span>Government Access Tier</span>
+          `;
+          tierBadge.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary text-on-primary font-semibold';
+          
+          formHeading.textContent = 'Municipal Officer Portal / அலுவலர் தளம்';
+          formSubheading.textContent = 'Administrative console for Ward Grievance Officers, Revenue Inspectors, and Engineers.';
+        } else {
+          officerForm.classList.add('hidden');
+          officerForm.classList.remove('flex');
+          citizenForm.classList.remove('hidden');
+          
+          tierBadge.innerHTML = `
+            <span class="material-symbols-outlined text-[14px]">public</span>
+            <span>Citizen Tier</span>
+          `;
+          tierBadge.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-low text-secondary font-semibold';
+
+          formHeading.textContent = 'Welcome Back / நல்வரவு';
+          formSubheading.textContent = 'Sign in to report civic issues or track your complaints across Tamil Nadu Urban Local Bodies.';
+        }
+      });
+    }
+
+    // Password Visibility Helpers
+    function setupPasswordToggle(buttonId, inputId) {
+      const toggleBtn = document.getElementById(buttonId);
+      const input = document.getElementById(inputId);
+      if (toggleBtn && input) {
+        toggleBtn.addEventListener('click', function() {
+          const isPassword = input.type === 'password';
+          input.type = isPassword ? 'text' : 'password';
+          const icon = toggleBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = isPassword ? 'visibility_off' : 'visibility';
+          }
+        });
+      }
+    }
+
+    setupPasswordToggle('citizen-toggle-password', 'citizen-password');
+    setupPasswordToggle('officer-toggle-password', 'officer-token');
+  })();
+</script></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.03)]"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex flex-col items-center md:items-start gap-space-xs text-center md:text-left"><div class="flex items-center gap-space-sm text-primary font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span><span class="font-label-lg text-label-lg">Toll-Free Citizen Grievance Helpline: 1800-425-2484</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Department of Municipal Administration & Water Supply, Government of Tamil Nadu</p></div><div class="flex flex-wrap items-center justify-center gap-space-md font-label-md text-label-md text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="citizen-charter" href="#">Citizen Charter</a><span class="text-outline-variant">•</span><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-outline-variant">•</span><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Statement</a><span class="text-outline-variant">•</span><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div><div class="bg-surface-container py-space-sm"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 CivicTrack. Government of Tamil Nadu. All rights reserved.</p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary-container">verified</span> W3C WCAG 2.2 AA Compliant</p></div></div></footer></body></html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter,+Noto+Sans+Tamil,+system-ui,+sans-serif:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#1f3242","error-container":"#ffdad6","secondary-container":"#76b8fe","on-secondary-fixed-variant":"#00497c","tertiary":"#002c10","background":"#f6f9ff","on-tertiary":"#ffffff","on-surface-variant":"#43474f","surface-bright":"#f6f9ff","secondary-fixed":"#d1e4ff","on-tertiary-fixed-variant":"#005323","on-primary-fixed":"#001b3c","surface-container-low":"#ecf5ff","surface-container":"#e1f0ff","on-background":"#081d2c","tertiary-container":"#00451c","inverse-on-surface":"#e6f2ff","tertiary-fixed":"#88faa0","on-error-container":"#93000a","on-tertiary-fixed":"#00210a","surface-container-highest":"#d0e5f9","primary-fixed-dim":"#a8c8ff","outline-variant":"#c3c6d0","on-primary-container":"#84a6df","on-secondary":"#ffffff","tertiary-fixed-dim":"#6cdd86","primary-fixed":"#d5e3ff","on-secondary-fixed":"#001d36","on-primary-fixed-variant":"#22477a","on-secondary-container":"#00487a","on-surface":"#081d2c","secondary-fixed-dim":"#9dcaff","error":"#ba1a1a","inverse-primary":"#a8c8ff","primary":"#00254e","on-tertiary-container":"#48ba68","on-error":"#ffffff","surface":"#f6f9ff","surface-container-high":"#d6ebff","outline":"#737780","secondary":"#0261a2","surface-variant":"#d0e5f9","on-primary":"#ffffff","primary-container":"#123b6d","surface-dim":"#c8dcf0","surface-tint":"#3c5f93","surface-container-lowest":"#ffffff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-lg":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","space-2xl":"3rem",margin:"1rem","gutter-desktop":"1.5rem","space-md":"1rem",gutter:"1rem","margin-desktop":"2rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"title-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"headline-sm":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"label-md":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],"body-lg":["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""],display:["\"Inter, Noto Sans Tamil, system-ui, sans-serif\""]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"title-lg":["16px",{lineHeight:"22px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],display:["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="bg-surface-container-low border-b border-surface-container-high"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop h-8 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><div><span class="font-label-md font-semibold text-primary">தமிழ்நாடு அரசு</span> | Government of Tamil Nadu — Municipal Digital Public Grievance Portal</div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="text-on-surface-variant">Font:</span><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface">A-</button><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface font-semibold">A</button><button class="px-1.5 py-0.5 rounded hover:bg-surface-container hover:text-on-surface">A+</button></div><span class="text-outline-variant">|</span><button class="hover:text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">contrast</span> High Contrast</button><span class="text-outline-variant">|</span><button class="hover:text-primary font-label-md font-semibold text-secondary">தமிழ்</button></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="CivicTrack Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V_5Wz38xFUOpi-rh_D5u0SlsT5K4lhMlHdjD90nkUcq7pW83oM_moVYGqb6vN0e5rWafs4TJ76gYB0OaU2CZaCDgvt0LC4y1GkQDXa-bLU9jcgAgijqz7G05ldvUJxModUcSRXGYXBndfsHBYmyMh1e70xFg0kCQ8F5qOtpXg8OCX9SmYYGVnQgYekiZ662S6IeyrENY_-whcMw5XnCx_HRAlhZ7ATLXbWj2_1fyw6YPz7y26haVd0UHA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-bold tracking-tight">CivicTrack TN</span><span class="font-label-sm text-label-sm text-on-surface-variant">நகராட்சி குறைதீர்ப்பு சேவை / Public Grievance Redressal</span></div></div><nav class="hidden xl:flex items-center gap-space-sm font-label-lg text-label-lg" data-active-classes="bg-surface-container-high text-primary font-semibold rounded-lg"><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-surface-container-high text-primary font-semibold rounded-lg" data-path="submit-complaint" href="#">Submit Complaint</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="track-complaint" href="#">Track Complaint</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="citizen-dashboard" href="#">Citizen Dashboard</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="help-faq" href="#">Help & FAQ</a><a class="px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center px-space-md py-2 rounded font-label-md text-label-md text-secondary hover:bg-secondary-fixed/40 transition-colors font-semibold" data-path="login" href="#">Citizen Login</a><a class="inline-flex items-center px-space-md py-2 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm font-semibold" data-path="officer-overview" href="#">Officer Control Room</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-7xl mx-auto w-full px-margin lg:px-margin-desktop py-space-xl">
+<!-- Breadcrumb & Administrative Header Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">முகப்பு / Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">புதிய புகார் பதிவு / Submit Complaint</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">
+          புதிய நகராட்சி புகார் பதிவு / File a Civic Grievance
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Government of Tamil Nadu Municipal Administration & Water Supply Department grievance intake protocol.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container-high px-space-md py-space-sm rounded-xl">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-primary">SLA Guarantee / உத்தரவாதம்</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standard turnaround: 24 - 72 Hours</span>
+</div>
+</div>
+</div>
+<!-- Multi-Step Progress Ribbon -->
+<div class="w-full bg-surface-container-lowest p-space-md md:p-space-lg rounded-xl shadow-sm mb-space-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="step-indicator flex items-center gap-space-sm cursor-pointer" id="step-node-1" onclick="goToStep(1)">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg font-bold shadow-sm">
+            1
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Step 1</span>
+<span class="font-title-lg text-title-lg text-primary truncate">Complaint Details</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">குறை விவரங்கள்</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="step-indicator flex items-center gap-space-sm cursor-pointer opacity-70 hover:opacity-100 transition-opacity" id="step-node-2" onclick="goToStep(2)">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-lg text-label-lg font-bold">
+            2
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Step 2</span>
+<span class="font-title-lg text-title-lg text-on-surface truncate">Location & Ward</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">இடம் & வார்டு</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="step-indicator flex items-center gap-space-sm cursor-pointer opacity-70 hover:opacity-100 transition-opacity" id="step-node-3" onclick="goToStep(3)">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-lg text-label-lg font-bold">
+            3
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Step 3</span>
+<span class="font-title-lg text-title-lg text-on-surface truncate">Photos & Proof</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">சான்றுகள்</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="step-indicator flex items-center gap-space-sm cursor-pointer opacity-70 hover:opacity-100 transition-opacity" id="step-node-4" onclick="goToStep(4)">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-lg text-label-lg font-bold">
+            4
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Step 4</span>
+<span class="font-title-lg text-title-lg text-on-surface truncate">Review & Submit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">சரிபார்ப்பு</span>
+</div>
+</div>
+</div>
+<!-- Linear progress bar bar track -->
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-secondary h-full transition-all duration-300 w-1/4" id="progress-fill"></div>
+</div>
+</div>
+<!-- Main Grid Content: Form Engine (8 cols) + Civic Guidance Panel (4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Primary Multi-Step Interactive Form -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<form class="space-y-space-xl" id="grievanceForm" onsubmit="handleFormSubmission(event)">
+<!-- SECTION A: Complaint Details -->
+<div class="form-step-content bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm space-y-space-lg" id="step-section-1">
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md md:p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">assignment</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">பிரிவு அ: புகார் விவரங்கள் / Complaint Details</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specify the type of municipal grievance and core context.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Part 1 of 4</span>
+</div>
+<!-- Title Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="complaintTitle">
+<span>Complaint Title / புகாரின் சுருக்க தலைப்பு <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">e.g., Major sewage overflow near Main Road</span>
+</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm transition-all" id="complaintTitle" placeholder="Brief summary of the issue..." required="" type="text" value="Major sewage overflow near Main Road Bus Stop"/>
+</div>
+<!-- Category & Subcategory Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="departmentCategory">
+                  Department / முதன்மை துறை <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-space-md pr-10 rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none transition-all cursor-pointer" id="departmentCategory" onchange="updateSubcategories(this.value)" required="">
+<option value="drainage">Drainage & Sewage (கழிவுநீர் மேலாண்மை)</option>
+<option value="roads">Roads & Pavements (சாலைகள் & நடைபாதைகள்)</option>
+<option value="water">Drinking Water Supply (குடிநீர் விநியோகம்)</option>
+<option value="solid_waste">Solid Waste & Garbage (திடக்கழிவு மேலாண்மை)</option>
+<option value="street_lights">Street Lights & Electrical (தெருவிளக்குகள்)</option>
+<option value="public_health">Public Health & Vector Control (பொது சுகாதாரம்)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="subCategory">
+                  Sub-Category / உப பிரிவு <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-space-md pr-10 rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none transition-all cursor-pointer" id="subCategory" required="">
+<option value="manhole_overflow">Manhole Overflow / Blocked Storm Drain</option>
+<option value="broken_pipeline">Broken Underground Sewage Pipe</option>
+<option value="open_drain_clog">Open Drain Choked with Plastic Silt</option>
+<option value="stagnant_sewage">Sewage Backflow into Residential Premises</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Description with Live Character Count -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="description">
+                  Detailed Description / விரிவான விவரம் <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="charCount">142 / 1000 characters</span>
+</div>
+<textarea class="w-full p-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm transition-all" id="description" maxlength="1000" minlength="30" oninput="updateCharCount(this)" placeholder="Explain the issue clearly. Mention duration, severity, and any local landmarks..." required="" rows="4">The main chamber cover is cracked and overflowing foul water onto the passenger waiting area since yesterday evening. Pedestrians cannot cross.</textarea>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min. 30 characters required for automated triage allocation.</span>
+</div>
+<!-- Urgency & Public Hazard Checkbox Box -->
+<div class="p-space-md rounded-xl bg-error-container/30 flex items-start gap-space-md">
+<input checked="" class="mt-1 w-5 h-5 rounded text-error focus:ring-error cursor-pointer" id="hazardAlert" type="checkbox"/>
+<div class="flex flex-col">
+<label class="font-title-lg text-title-lg text-on-surface font-semibold cursor-pointer" for="hazardAlert">
+                  Public Safety Hazard / உடனடி ஆபத்து & பொது விபத்து எச்சரிக்கை
+                </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Check this if the defect causes direct road blockage, traffic obstruction, or imminent health & contamination risk requiring emergency Ward Squad dispatch within 12 hours.
+                </span>
+</div>
+</div>
+<!-- Step 1 Button Bar -->
+<div class="flex items-center justify-end pt-space-md">
+<button class="h-11 px-space-xl bg-primary text-on-primary rounded font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-space-xs" onclick="goToStep(2)" type="button">
+<span>Continue to Location / அடுத்த படி</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- SECTION B: Location & Ward Allocation -->
+<div class="form-step-content bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm space-y-space-lg hidden" id="step-section-2">
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md md:p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">pin_drop</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">பிரிவு ஆ: இடம் மற்றும் வார்டு விவரங்கள் / Location & Ward</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tag exact urban local body boundaries for responsible field staff dispatch.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Part 2 of 4</span>
+</div>
+<!-- Corporation, Zone, Ward Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="corporationSelect">
+                  City / Corporation <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-space-md pr-10 rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none cursor-pointer" id="corporationSelect" required="">
+<option selected="" value="trichy">Tiruchirappalli (திருச்சிராப்பள்ளி)</option>
+<option value="chennai">Greater Chennai (சென்னை)</option>
+<option value="coimbatore">Coimbatore (கோயம்புத்தூர்)</option>
+<option value="madurai">Madurai (மதுரை)</option>
+<option value="salem">Salem (சேலம்)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="zoneSelect">
+                  Zone / மண்டலம் <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-space-md pr-10 rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none cursor-pointer" id="zoneSelect" required="">
+<option selected="" value="zone3">Zone III - Ponmalai (பொன்மலை)</option>
+<option value="zone1">Zone I - Srirangam (ஸ்ரீரங்கம்)</option>
+<option value="zone2">Zone II - Ariyamangalam (அரியமங்கலம்)</option>
+<option value="zone4">Zone IV - K.Abishekapuram (கே.அபிஷேகபுரம்)</option>
+<option value="zone5">Zone V - Golden Rock (பொன்மலை கோட்டம்)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="wardSelect">
+                  Ward No. / வார்டு எண் <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-space-md pr-10 rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm appearance-none cursor-pointer" id="wardSelect" required="">
+<option selected="" value="43">Ward 43 - K.K. Nagar West (கே.கே. நகர்)</option>
+<option value="42">Ward 42 - Crawford Colony</option>
+<option value="44">Ward 44 - Sundar Nagar East</option>
+<option value="45">Ward 45 - Khajamalai Main</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Street Address & Pincode -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="streetAddress">
+                  Street / Landmark / தெரு & அடையாளம் <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="streetAddress" placeholder="e.g. 4th Cross, Opposite VOC Community Hall" required="" type="text" value="4th Cross, Opposite VOC Community Hall, KK Nagar Main"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="pincode">
+                  Pincode / அஞ்சல் குறியீடு <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="pincode" maxlength="6" pattern="[0-9]{6}" required="" type="text" value="620021"/>
+</div>
+</div>
+<!-- Simulated Map Component with Pin and GPS Quick Action -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">map</span>
+                  Interactive Geospatial Pin / வரைபட குறிப்பான்
+                </span>
+<button class="h-9 px-space-sm rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold hover:bg-secondary-fixed-dim transition-colors flex items-center gap-1" onclick="simulateGpsLocate()" type="button">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+                  Detect Current Location (GPS)
+                </button>
+</div>
+<!-- Location Interactive Simulation Box -->
+<div class="relative w-full h-64 rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-location="Tiruchirappalli, Tamil Nadu" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVkpO_BmaNrssBCCqjs3uLG9qRiRUGxfWU2iiLzMf4TaMMHoZHYq4RHyknNk-igDq7zfwlXYRuCO-TrILO2CpNqZpW6hG7NIh1Pwd7oSa1EA3tOUjL56gh25GyI9UcLFv8BuQlNMYy2D9dJPFHS0yEAd2kCMxgDchBTZv49vKo0hCsH31VGzf83vxumm3qVlwarbwxWqgYRdsxxHwHErcyP1YetgQSyOZk_PpBbYZknipiDuccDAnO')">
+<!-- Translucent overlay simulating GIS Grid -->
+<div class="w-full h-full bg-primary/20 backdrop-blur-[1px] flex flex-col justify-between p-space-md">
+<div class="flex items-center justify-between">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-sm text-label-sm font-mono text-primary font-bold" id="coordDisplay">10.7905° N, 78.7047° E</span>
+</div>
+<span class="bg-primary/80 text-on-primary px-2 py-0.5 rounded text-label-sm font-mono">Ward 43 Boundary Verified</span>
+</div>
+<!-- Center Fixed Pin -->
+<div class="self-center flex flex-col items-center">
+<div class="bg-primary text-on-primary px-2.5 py-1 rounded-full text-label-sm font-semibold shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                        Defect Location Pin
+                      </div>
+<span class="material-symbols-outlined text-error text-[40px] drop-shadow-md -mt-1">location_on</span>
+</div>
+<!-- Map Layer Tools -->
+<div class="flex items-center justify-between">
+<div class="bg-surface-container-lowest/90 px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant shadow-sm">
+                        Tap map anywhere to recalibrate pin
+                      </div>
+<div class="flex gap-1 bg-surface-container-lowest/90 p-1 rounded shadow-sm">
+<button class="w-7 h-7 flex items-center justify-center font-bold text-primary hover:bg-surface-container rounded" type="button">+</button>
+<button class="w-7 h-7 flex items-center justify-center font-bold text-primary hover:bg-surface-container rounded" type="button">-</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2 Navigation Buttons -->
+<div class="flex items-center justify-between pt-space-md">
+<button class="h-11 px-space-lg bg-surface-container text-on-surface rounded font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors" onclick="goToStep(1)" type="button">
+                Previous Step / முந்தையது
+              </button>
+<button class="h-11 px-space-xl bg-primary text-on-primary rounded font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-space-xs" onclick="goToStep(3)" type="button">
+<span>Continue to Evidence / சான்றுகள்</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- SECTION C: Supporting Evidence -->
+<div class="form-step-content bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm space-y-space-lg hidden" id="step-section-3">
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md md:p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">photo_camera</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">பிரிவு இ: சான்றுகள் மற்றும் படங்கள் / Supporting Evidence</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Photographs provide geo-tagged forensic verification for the field engineer.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Part 3 of 4</span>
+</div>
+<!-- Dropzone Container -->
+<div class="p-space-xl rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors relative">
+<input accept="image/jpeg,image/png" class="absolute inset-0 opacity-0 cursor-pointer" id="fileUpload" multiple="" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center mb-space-sm text-secondary">
+<span class="material-symbols-outlined text-[32px]">cloud_upload</span>
+</div>
+<span class="font-title-lg text-title-lg text-primary font-semibold">
+                Drag and drop complaint photographs here, or browse files
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+                JPG, PNG format (Maximum 3 files, up to 5MB each). Camera timestamp & EXIF GPS preserved.
+              </span>
+<button class="mt-space-md h-9 px-space-md rounded bg-primary text-on-primary font-label-md text-label-md font-semibold pointer-events-none" type="button">
+                Select Photo from Device
+              </button>
+</div>
+<!-- Evidence Gallery Thumbnails -->
+<div class="space-y-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-2">
+<span>Attached Inspection Records</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-mono">2 files attached</span>
+</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="previewGallery">
+<!-- Realistic Photo Preview Card 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex gap-space-md items-center shadow-sm relative">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a damaged concrete municipal drainage manhole overflowing dirty water onto a paved city road with nearby sidewalk curb, daylight institutional forensic documentation style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2_HfMo27OXBSBNuwcTUAZ8K26FludEIaTmvL7tssTdB9COyk1MnqWy6V6CTP1_eyOlDDb7SeYkHGaqKGZSxMDJUBECv5LTvAfjkbHEJax_u8BeJQ4R5w6PHa-x3GuetV7GIWAJMvjsQYtERop48yTZOTdGYBsw89f-G6Mb4CL0NOxC5mdx_nLIk1pMihayAHH70e3hAfkpmCDf27K5EAnJVtubp623PIHFr4wq6Yxwe8-iv0acflO"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-title-lg text-primary truncate font-semibold">IMG_20250518_102.jpg</span>
+<button class="text-error hover:text-on-error-container p-1 rounded" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.8 MB • JPG Format</span>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[15px] text-tertiary">my_location</span>
+<span>GPS: 10.7905, 78.7047 Verified</span>
+</div>
+</div>
+</div>
+<!-- Realistic Photo Preview Card 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-xl flex gap-space-md items-center shadow-sm relative">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Wide shot of a municipal bus shelter and commercial street with flooded sidewalk and pedestrians walking carefully around dirty rainwater puddle in Tiruchirappalli, clear daytime lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb6dfpPb93fwLZQDv_OTb6A09a1yX5qfdITB1bp89fRDMlJY6cL9iptNv03ATC54U24CWcZZ8uQbDXP4UwcBh8LEEKQvd9DngKKknX0sa5QhUscQuBqQs7Sd0aD9LLNIQ2wSAW5kIJMRgPizmyYU1tFvr80ef87R1VvIsFjGGagJNELfHbGjO4DQrt08mK7ys9JDjhAUOMh_x4v-IyTXJFBlalnRN8tpjG_GLiraxAwH8H2lS7aTtH"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-lg text-title-lg text-primary truncate font-semibold">SITE_STREET_VIEW.jpg</span>
+<button class="text-error hover:text-on-error-container p-1 rounded" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.4 MB • JPG Format</span>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[15px] text-tertiary">my_location</span>
+<span>GPS: 10.7906, 78.7049 Verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Helpful Guidance Notice -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-start gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0">tips_and_updates</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-primary">Field Staff Advisory:</span> Clear photographs showing identifiable street signboards, nearby community centers, or shop fronts accelerate the ward sanitary officer's on-site verification by over 60%.
+              </div>
+</div>
+<!-- Step 3 Navigation Buttons -->
+<div class="flex items-center justify-between pt-space-md">
+<button class="h-11 px-space-lg bg-surface-container text-on-surface rounded font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors" onclick="goToStep(2)" type="button">
+                Previous Step / முந்தையது
+              </button>
+<button class="h-11 px-space-xl bg-primary text-on-primary rounded font-label-lg text-label-lg font-semibold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-space-xs" onclick="goToStep(4)" type="button">
+<span>Continue to Verification / தொடரவும்</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- SECTION D: Citizen Contact & Verification -->
+<div class="form-step-content bg-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-sm space-y-space-lg hidden" id="step-section-4">
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md md:p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">shield_person</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">பிரிவு ஈ: தொடர்பு மற்றும் உறுதிப்படுத்தல் / Review & Authentication</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Confidential identity details strictly protected under Tamil Nadu Data Policy.</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Part 4 of 4</span>
+</div>
+<!-- Contact Input Micro-Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="citizenName">
+                  Citizen Full Name / விண்ணப்பதாரர் பெயர் <span class="text-error">*</span>
+</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="citizenName" required="" type="text" value="K. Sundaramoorthy"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface" for="citizenMobile">
+                  Mobile Number / கைபேசி எண் <span class="text-error">*</span>
+</label>
+<div class="flex">
+<span class="h-12 px-3 rounded-l-lg bg-surface-container flex items-center font-label-md text-label-md text-on-surface font-mono">+91</span>
+<input class="w-full h-12 px-space-md rounded-r-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="citizenMobile" maxlength="10" pattern="[0-9]{10}" required="" type="tel" value="9842187654"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-lg text-label-lg text-on-surface" for="citizenEmail">
+                  Email Address / மின்னஞ்சல் முகவரி <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(Optional for E-acknowledgement)</span>
+</label>
+<input class="w-full h-12 px-space-md rounded-lg bg-surface text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="citizenEmail" type="email" value="sundar.trichy@gmail.com"/>
+</div>
+</div>
+<!-- SMS Preference Radio Group -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold">SMS Alert Language / குறுஞ்செய்தி மொழி</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated milestone dispatch upon stage completion.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-1.5 font-label-md text-label-md cursor-pointer">
+<input checked="" class="text-primary focus:ring-secondary" name="lang_pref" type="radio" value="ta"/>
+<span>தமிழ் (Tamil)</span>
+</label>
+<label class="flex items-center gap-1.5 font-label-md text-label-md cursor-pointer">
+<input class="text-primary focus:ring-secondary" name="lang_pref" type="radio" value="en"/>
+<span>English</span>
+</label>
+</div>
+</div>
+<!-- Data Privacy Seal -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0">lock</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-primary">Identity Privacy Notice:</span> Your phone number and email will be used exclusively for automated status updates and inspector clarification. It will never be publicly displayed on open portals.
+              </p>
+</div>
+<!-- Arithmetic Security CAPTCHA Challenge -->
+<div class="p-space-md rounded-xl bg-surface-container-high/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-mono text-title-lg font-bold tracking-widest select-none">
+                  8 + 5 = ?
+                </div>
+<div class="flex flex-col">
+<label class="font-label-md text-label-md text-primary font-semibold" for="captchaAnswer">
+                    Security Challenge / பாதுகாப்புக் குறியீடு <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Solve simple arithmetic to prevent spam.</span>
+</div>
+</div>
+<input class="w-24 h-12 text-center font-mono font-bold text-headline-sm rounded-lg bg-surface text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" id="captchaAnswer" maxlength="2" placeholder="Result" required="" type="text" value="13"/>
+</div>
+<!-- Submit Final Action Bar -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md pt-space-md border-t border-surface-container">
+<button class="w-full md:w-auto h-11 px-space-lg bg-surface-container text-on-surface rounded font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors" onclick="goToStep(3)" type="button">
+                Previous Step / முந்தையது
+              </button>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="h-11 px-space-md rounded bg-surface-container-high text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" onclick="alert('Draft saved to browser storage. You can resume anytime using your phone number.')" type="button">
+                  Save Draft / வரைவு சேமி
+                </button>
+<button class="flex-1 md:flex-initial h-12 px-space-xl bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-md flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Submit Complaint / புகார் சமர்ப்பிக்க</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+<!-- Submission Success Confirmation Modal / Banner (Hidden initially) -->
+<div class="hidden bg-surface-container-lowest p-space-xl rounded-xl shadow-xl flex-col items-center text-center space-y-space-md" id="successOverlay">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[36px]">task_alt</span>
+</div>
+<span class="px-3 py-1 rounded bg-secondary-fixed text-secondary font-label-sm text-label-sm font-bold font-mono">
+            TOKEN: TN-TRY-2025-08492
+          </span>
+<h3 class="font-headline-lg text-headline-lg text-primary">
+            புகார் வெற்றிகரமாக பதிவு செய்யப்பட்டது!
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+            Your grievance has been formally filed and instantly routed to the Ward 43 Junior Engineer & Health Inspector. A confirmation receipt has been sent via SMS to 9842187654.
+          </p>
+<div class="w-full max-w-md bg-surface-container p-space-md rounded-xl text-left font-body-sm text-body-sm space-y-2">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Allocated Officer:</span>
+<span class="font-semibold text-primary">Er. M. Rajasekaran, AE (Ward 43)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Inspection SLA Deadline:</span>
+<span class="font-semibold text-primary">20 May 2025, 05:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Department:</span>
+<span class="font-semibold text-primary">Drainage & Underground Sewage</span>
+</div>
+</div>
+<div class="flex gap-space-md pt-space-sm">
+<a class="h-10 px-space-lg rounded bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Track This Grievance
+            </a>
+<button class="h-10 px-space-md rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold" onclick="window.location.reload()">
+              Register Another Grievance
+            </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Institutional Context & Help Cards (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Live Ward Status Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Ward Redressal Desk</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Tiruchirappalli Corporation Zone III</p>
+</div>
+</div>
+<div class="space-y-space-xs font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Ward Engineer In-Charge:</span>
+<span class="font-semibold text-primary">Er. M. Rajasekaran</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Sanitary Inspector:</span>
+<span class="font-semibold text-primary">Thiru. S. Aruldas</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface-variant">Active Grievances Today:</span>
+<span class="font-bold text-secondary">14 Under Action</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">verified</span>
+<span>Citizens Charter resolution rate: 94.2% within SLA.</span>
+</div>
+</div>
+<!-- Citizens Charter SLA Benchmark -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<h3 class="font-title-lg text-title-lg text-primary font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+            Official Resolution Timeframes
+          </h3>
+<div class="space-y-space-sm font-body-sm text-body-sm">
+<div class="flex items-start justify-between pb-2 border-b border-surface-container">
+<div>
+<p class="font-semibold text-on-surface">Drainage Block / Overflow</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">கழிவுநீர் அடைப்பு</p>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-fixed text-primary font-label-sm font-semibold">24 Hours</span>
+</div>
+<div class="flex items-start justify-between pb-2 border-b border-surface-container">
+<div>
+<p class="font-semibold text-on-surface">Drinking Water Contamination</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">குடிநீர் கலப்படம்</p>
+</div>
+<span class="px-2 py-1 rounded bg-error-container text-on-error-container font-label-sm font-semibold">12 Hours</span>
+</div>
+<div class="flex items-start justify-between pb-2 border-b border-surface-container">
+<div>
+<p class="font-semibold text-on-surface">Non-Burning Street Lights</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">தெருவிளக்கு பழுது</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm font-semibold">48 Hours</span>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<p class="font-semibold text-on-surface">Pothole & Road Craters</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">சாலை குழிகள்</p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-sm font-semibold">7 Days</span>
+</div>
+</div>
+</div>
+<!-- 24x7 Control Room Call Box -->
+<div class="bg-primary text-on-primary p-space-lg rounded-xl shadow-md space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[28px] text-secondary-fixed">phone_in_talk</span>
+<div>
+<h4 class="font-title-lg text-title-lg font-bold">24x7 Helpline Support</h4>
+<p class="font-label-sm text-label-sm text-primary-fixed-dim">முனிசிபல் கட்டுப்பாட்டு அறை</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed leading-relaxed">
+            Need urgent assistance or registering grievance over the phone? Contact our municipal centralized hotline.
+          </p>
+<div class="pt-2">
+<a class="block w-full py-2.5 px-space-md rounded bg-surface text-primary font-headline-sm text-headline-sm font-bold text-center hover:bg-surface-bright transition-colors" href="tel:18004252484">
+              1800-425-2484
+            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Step Wizard Controller
+  function goToStep(stepNumber) {
+    // Hide all step sections
+    for (let i = 1; i <= 4; i++) {
+      const section = document.getElementById('step-section-' + i);
+      const indicator = document.getElementById('step-node-' + i);
+      if (section) section.classList.add('hidden');
+      if (indicator) {
+        indicator.classList.remove('opacity-100');
+        indicator.classList.add('opacity-70');
+        const badge = indicator.querySelector('div:first-child');
+        if (badge && i !== stepNumber) {
+          badge.className = "w-9 h-9 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-label-lg text-label-lg font-bold";
+        }
+      }
+    }
+
+    // Show target section
+    const currentSection = document.getElementById('step-section-' + stepNumber);
+    const currentIndicator = document.getElementById('step-node-' + stepNumber);
+    if (currentSection) currentSection.classList.remove('hidden');
+    if (currentIndicator) {
+      currentIndicator.classList.remove('opacity-70');
+      currentIndicator.classList.add('opacity-100');
+      const activeBadge = currentIndicator.querySelector('div:first-child');
+      if (activeBadge) {
+        activeBadge.className = "w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-lg text-label-lg font-bold shadow-sm";
+      }
+    }
+
+    // Adjust linear progress bar
+    const progressFill = document.getElementById('progress-fill');
+    if (progressFill) {
+      const percentages = ['25%', '50%', '75%', '100%'];
+      progressFill.style.width = percentages[stepNumber - 1];
+    }
+
+    // Scroll to top of form smoothly
+    window.scrollTo({ top: 120, behavior: 'smooth' });
+  }
+
+  // Live Character Counter
+  function updateCharCount(textarea) {
+    const counter = document.getElementById('charCount');
+    if (counter) {
+      counter.innerText = textarea.value.length + " / 1000 characters";
+    }
+  }
+
+  // Dynamic Subcategory Updater
+  function updateSubcategories(dept) {
+    const subSelect = document.getElementById('subCategory');
+    if (!subSelect) return;
+    subSelect.innerHTML = '';
+
+    const categories = {
+      drainage: [
+        { val: "manhole_overflow", text: "Manhole Overflow / Blocked Storm Drain" },
+        { val: "broken_pipeline", text: "Broken Underground Sewage Pipe" },
+        { val: "open_drain_clog", text: "Open Drain Choked with Plastic Silt" }
+      ],
+      roads: [
+        { val: "pothole", text: "Dangerous Deep Potholes / பள்ளங்கள்" },
+        { val: "road_cavein", text: "Road Cave-in or Settlement" },
+        { val: "broken_culvert", text: "Damaged Road Culvert / Bridge Slab" }
+      ],
+      water: [
+        { val: "no_supply", text: "No Water Supply for over 48 hours" },
+        { val: "low_pressure", text: "Extremely Low Pressure in Tail End" },
+        { val: "contamination", text: "Sewage Contamination in Drinking Tap" }
+      ],
+      solid_waste: [
+        { val: "garbage_dump", text: "Overflowing Garbage Bin / குப்பை தேக்கம்" },
+        { val: "debris", text: "Construction Debris Dumped on Road" },
+        { val: "animal_carcass", text: "Deceased Animal Removal Request" }
+      ],
+      street_lights: [
+        { val: "blackout", text: "Entire Street Light Circuit Off" },
+        { val: "damaged_pole", text: "Tilting or Damaged Lamp Post" },
+        { val: "flickering", text: "Flickering LED Fixture" }
+      ],
+      public_health: [
+        { val: "mosquito_fog", text: "Mosquito Breeding / Fogging Request" },
+        { val: "stagnant_water", text: "Stagnant Water Pool in Vacant Plot" }
+      ]
+    };
+
+    const options = categories[dept] || categories.drainage;
+    options.forEach(opt => {
+      const el = document.createElement('option');
+      el.value = opt.val;
+      el.innerText = opt.text;
+      subSelect.appendChild(el);
+    });
+  }
+
+  // Simulate GPS coordinates acquisition
+  function simulateGpsLocate() {
+    const coordDisplay = document.getElementById('coordDisplay');
+    if (coordDisplay) {
+      coordDisplay.innerText = "Locating via GPS...";
+      setTimeout(() => {
+        coordDisplay.innerText = "10.790514° N, 78.704712° E (±4m accuracy)";
+      }, 600);
+    }
+  }
+
+  // File Upload Preview Mock Handler
+  function handleFileSelect(e) {
+    const files = e.target.files;
+    if (files.length > 0) {
+      alert(files.length + " photo(s) selected and geo-tagged successfully.");
+    }
+  }
+
+  // Final Form Submission Mock
+  function handleFormSubmission(e) {
+    e.preventDefault();
+    const captchaVal = document.getElementById('captchaAnswer').value.trim();
+    if (captchaVal !== "13") {
+      alert("Please solve the math challenge correctly (8 + 5 = 13).");
+      return;
+    }
+
+    // Hide steps and display official acknowledgement
+    for (let i = 1; i <= 4; i++) {
+      const section = document.getElementById('step-section-' + i);
+      if (section) section.classList.add('hidden');
+    }
+    const successOverlay = document.getElementById('successOverlay');
+    if (successOverlay) {
+      successOverlay.classList.remove('hidden');
+      successOverlay.classList.add('flex');
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface mt-space-2xl border-t border-surface-container"><div class="bg-surface-container-low py-space-xl"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-space-xl"><div class="space-y-space-sm md:col-span-1"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[28px]">account_balance</span><span class="font-headline-sm text-headline-sm text-primary font-bold">CivicTrack TN</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">The unified municipal governance & digital complaint management pipeline for local urban and panchayat administration in Tamil Nadu.</p><div class="font-label-sm text-label-sm text-outline">Unified Civic Engine v2.4 (Govt. of TN Standard)</div></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Citizen Services</h3><ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="submit-complaint" href="#">Register Grievance / புதிய புகார்</a></li><li><a class="hover:text-primary transition-colors" data-path="track-complaint" href="#">Track Status / நிலை அறிதல்</a></li><li><a class="hover:text-primary transition-colors" data-path="citizen-charter" href="#">Citizen Charter & Timelines</a></li><li><a class="hover:text-primary transition-colors" data-path="ward-contacts" href="#">Know Your Ward Officer</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Central Helpline</h3><div class="p-space-sm rounded bg-surface-container-high/50 border border-surface-container"><p class="font-label-sm text-label-sm text-on-surface-variant">Toll-Free Grievance Cell</p><p class="font-title-lg text-title-lg font-bold text-primary">1800-425-2484</p><p class="font-body-sm text-body-sm text-on-surface-variant">Mon - Sat | 08:00 AM - 08:00 PM</p></div><p class="font-body-sm text-body-sm text-on-surface-variant">Email: grievances.municipality@tn.gov.in</p></div><div class="space-y-space-sm"><h3 class="font-title-lg text-title-lg text-primary font-semibold">Administrative Access</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Restricted access for designated Municipal Commissioners, Ward Engineers, and Sanitary Inspectors.</p><a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary font-semibold hover:underline" data-path="officer-overview" href="#"><span class="material-symbols-outlined text-[16px]">lock</span> Staff Single Sign-On (SSO)</a></div></div></div><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div>© 2025 Municipal Administration & Water Supply Department, Govt. of Tamil Nadu. <span class="text-outline">Demonstration System for Municipal Redressal Management.</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Citizen Charter</a><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Statement</a><a class="hover:text-primary transition-colors" data-path="security-audit" href="#">Audit & Compliance</a></div></div></footer></body></html>

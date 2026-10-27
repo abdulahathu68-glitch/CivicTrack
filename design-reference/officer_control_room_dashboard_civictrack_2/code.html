@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Control Room - Tiruchirappalli City Municipal Corporation</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Tamil:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00254e",
+            "primary-container": "#123b6d",
+            "surface": "#f8fafc",
+            "surface-dim": "#f1f5f9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f8fafc",
+            "surface-container": "#f1f5f9",
+            "surface-container-high": "#e2e8f0",
+            "surface-container-highest": "#cbd5e1",
+            "outline": "#64748b",
+            "outline-variant": "#cbd5e1",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#334155",
+            "error": "#b91c1c",
+            "error-container": "#fee2e2",
+            "on-error": "#ffffff",
+            "on-error-container": "#991b1b",
+            "tertiary": "#065f46",
+            "tertiary-container": "#d1fae5",
+            "on-tertiary-container": "#065f46",
+            "secondary": "#0261a2",
+            "secondary-container": "#e0f2fe",
+            "on-secondary-container": "#0369a1",
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Tamil', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', 'Noto Sans Tamil', system-ui, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 font-sans antialiased text-[13px]">
+<!-- Top Global Command & Status Bar -->
+<header class="fixed top-0 left-0 right-0 h-14 bg-[#123b6d] text-white border-b border-blue-900/60 z-50 flex items-center justify-between px-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2.5">
+<img alt="CivicTrack Official Logo" class="h-8 w-8 object-contain bg-white rounded p-0.5 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWKpzHoyX_VIafJ7kEoeirp0ECmc02ZZBwtSQoqEyo5ejDCLLYMbBYBPVyYyO6aHUPnXRSe-iGttN3uibHdKBpVAhhAeRPQUAVFpnOhfsX9z-DIDoj-dY6BQrgIzEf7DGZEZ4YsW1vHoCIPD-Eqy-z_HibW40SrVdQNGfE6eQCzPkniFLM2xXIJ_RFJdZ707n5uN4znV_wP0_gPX--FYO3wpPSwEXeAWyI7bO2dtGi4YYP9-H97AGq6yEg1OvnfcPHtg"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-bold text-sm tracking-tight text-white leading-tight">CivicTrack</span>
+<span class="text-[11px] font-medium text-blue-200">| Tiruchirappalli City Corporation</span>
+<span class="px-1.5 py-0.2 rounded bg-[#00254e] text-blue-200 text-[10px] font-semibold border border-blue-400/20">Zone 3 Desk</span>
+</div>
+<span class="text-[11px] text-blue-200/90 font-normal">திருச்சி மாநகராட்சி • மத்திய குறைதீர்ப்பு கட்டுப்பாட்டு மையம் (GRO Hub)</span>
+</div>
+</div>
+<!-- Breadcrumb indicator -->
+<div class="hidden xl:flex items-center gap-1.5 text-xs text-blue-200 border-l border-blue-400/30 pl-3">
+<span class="text-blue-300">Operational Desk</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-white font-medium">Control Room Console</span>
+</div>
+</div>
+<!-- Right System Indicators -->
+<div class="flex items-center gap-3">
+<!-- Live Sync Pill -->
+<div class="flex items-center gap-2 px-2.5 py-1 rounded bg-[#0b274c] border border-blue-400/30 text-[11px]">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-blue-100 font-medium">Live Sync: Active</span>
+<span class="text-blue-300">• SLA Clock Live</span>
+</div>
+<!-- Quick Export / Report Action -->
+<button class="hidden md:flex items-center gap-1 px-2.5 py-1 rounded bg-[#00254e] hover:bg-blue-950 text-blue-100 border border-blue-400/20 text-xs font-medium transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+        Print Shift Roster
+      </button>
+<button class="hidden md:flex items-center gap-1 px-2.5 py-1 rounded bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+        Manual Walk-in
+      </button>
+<!-- Language Switcher -->
+<button class="px-2 py-0.5 rounded border border-blue-400/30 bg-[#00254e] text-xs font-semibold text-blue-100 hover:bg-blue-950">
+        EN | தமிழ்
+      </button>
+<!-- Officer Profile Tag -->
+<div class="flex items-center gap-2 pl-2 border-l border-blue-400/30">
+<div class="text-right hidden sm:block">
+<div class="text-xs font-semibold text-white leading-tight">Thiru. K. Senthil Kumar, M.E.</div>
+<div class="text-[10px] text-blue-200">Zonal Officer / GRO (Zone 3)</div>
+</div>
+<div class="w-8 h-8 rounded bg-blue-800 border border-blue-400/30 flex items-center justify-center font-bold text-white text-xs">
+          KS
+        </div>
+</div>
+</div>
+</header>
+<!-- Left Sidebar Navigation -->
+<aside class="fixed left-0 top-14 bottom-0 w-60 bg-[#123b6d] text-slate-100 border-r border-blue-950 flex flex-col z-40">
+<!-- Active Jurisdiction Summary -->
+<div class="p-3 border-b border-blue-800/80 bg-[#0b274c]">
+<div class="text-[10px] uppercase font-bold text-blue-300 tracking-wider">Assigned Jurisdiction</div>
+<div class="text-xs font-semibold text-white truncate mt-0.5">Tiruchirappalli City Corp.</div>
+<div class="text-[11px] text-blue-200 truncate">Zone 3 - K.Abishekapuram (Wards 38-44, 58)</div>
+</div>
+<!-- Nav List -->
+<nav class="flex-1 px-2 py-2 space-y-0.5 overflow-y-auto custom-scrollbar">
+<div class="px-2 pt-2 pb-1 text-[10px] font-bold text-blue-300 uppercase tracking-wider">Operational Desk</div>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded bg-blue-900/90 text-white font-semibold text-xs border border-blue-400/20" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-blue-200">dashboard</span>
+<span>Control Room</span>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+</a>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-blue-300">inbox</span>
+<span>All Complaints</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-blue-950 text-blue-200 text-[10px] font-mono">1,482</span>
+</a>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-amber-300">pending_actions</span>
+<span>Pending Review</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-amber-900/60 text-amber-200 text-[10px] font-bold font-mono">47</span>
+</a>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-cyan-300">engineering</span>
+<span>Field Operations</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-blue-950 text-blue-200 text-[10px] font-mono">189</span>
+</a>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-emerald-300">task_alt</span>
+<span>Resolved / Audit</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-300 text-[10px] font-mono">1,218</span>
+</a>
+<a class="flex items-center justify-between px-2.5 py-1.5 rounded text-red-200 hover:bg-red-900/40 text-xs font-medium transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-red-400">warning</span>
+<span>SLA Breached</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-red-950 text-red-300 text-[10px] font-bold font-mono">28</span>
+</a>
+<div class="px-2 pt-3 pb-1 text-[10px] font-bold text-blue-300 uppercase tracking-wider">Governance &amp; Officers</div>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-blue-300">domain</span>
+<span>Departments &amp; Wards</span>
+</a>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-blue-300">assignment_ind</span>
+<span>Officer Gang Roster</span>
+</a>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-blue-300">insights</span>
+<span>SLA &amp; Escalation Reports</span>
+</a>
+<a class="flex items-center gap-2 px-2.5 py-1.5 rounded text-blue-100 hover:bg-blue-800/50 text-xs font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-blue-300">history_edu</span>
+<span>Audit Trail Logs</span>
+</a>
+</nav>
+<!-- Sidebar Bottom System Details -->
+<div class="p-2.5 border-t border-blue-900/80 bg-[#0b274c] space-y-1.5">
+<div class="flex items-center justify-between text-[11px] text-blue-200">
+<span>Commissioner Notice:</span>
+<span class="text-red-300 font-semibold font-mono">4 Alerts</span>
+</div>
+<a class="flex items-center justify-center gap-1.5 w-full py-1.5 rounded bg-blue-900 hover:bg-blue-800 text-white text-xs font-semibold border border-blue-400/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-[15px]">public</span>
+        Citizen Public Portal
+      </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-60 pt-14 min-h-screen bg-[#f8fafc]">
+<div class="p-4 space-y-3.5 max-w-[1700px] mx-auto">
+<!-- Compact Institutional KPI Ribbon (Structured, crisp 1px borders, no puffy roundings) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+<!-- Total Received -->
+<div class="bg-white border border-slate-200 rounded p-2.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between text-slate-500">
+<span class="text-[11px] uppercase font-bold tracking-wider text-slate-600">Total Received</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">inventory_2</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="text-2xl font-bold text-[#00254e] font-mono tracking-tight">1,482</span>
+<span class="text-[11px] text-slate-500 font-medium">This Month</span>
+</div>
+<div class="mt-1.5 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span>Zone 3 Share</span>
+<span class="font-semibold text-slate-800">426 (28.7%)</span>
+</div>
+</div>
+<!-- Pending Review -->
+<div class="bg-white border border-amber-200 rounded p-2.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between text-amber-700">
+<span class="text-[11px] uppercase font-bold tracking-wider">Pending Review</span>
+<span class="material-symbols-outlined text-amber-600 text-[18px]">pending_actions</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="text-2xl font-bold text-amber-700 font-mono tracking-tight">47</span>
+<span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-bold">Needs Assign</span>
+</div>
+<div class="mt-1.5 pt-1.5 border-t border-amber-100 flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Critical Priority</span>
+<span class="font-bold text-red-700">12 urgent</span>
+</div>
+</div>
+<!-- Field Operations -->
+<div class="bg-white border border-slate-200 rounded p-2.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between text-slate-500">
+<span class="text-[11px] uppercase font-bold tracking-wider text-slate-600">Field Crew Dispatched</span>
+<span class="material-symbols-outlined text-blue-600 text-[18px]">engineering</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="text-2xl font-bold text-[#00254e] font-mono tracking-tight">189</span>
+<span class="text-[11px] text-blue-700 font-semibold">Active Work</span>
+</div>
+<div class="mt-1.5 pt-1.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span>Inspectors Deployed</span>
+<span class="font-semibold text-slate-800">34 Gangs</span>
+</div>
+</div>
+<!-- Resolved in SLA -->
+<div class="bg-white border border-emerald-200 rounded p-2.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between text-emerald-800">
+<span class="text-[11px] uppercase font-bold tracking-wider">Resolved within SLA</span>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">verified</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="text-2xl font-bold text-emerald-800 font-mono tracking-tight">1,218</span>
+<span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold font-mono">92.4% SLA</span>
+</div>
+<div class="mt-1.5 pt-1.5 border-t border-emerald-100 flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Avg Resolution SLA</span>
+<span class="font-semibold text-emerald-800">28.4 Hours</span>
+</div>
+</div>
+<!-- SLA Breached -->
+<div class="bg-white border border-red-200 rounded p-2.5 flex flex-col justify-between shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between text-red-700">
+<span class="text-[11px] uppercase font-bold tracking-wider">SLA Breached / Escalated</span>
+<span class="material-symbols-outlined text-red-600 text-[18px]">warning</span>
+</div>
+<div class="mt-1 flex items-baseline justify-between">
+<span class="text-2xl font-bold text-red-700 font-mono tracking-tight">28</span>
+<span class="px-1.5 py-0.5 rounded bg-red-100 text-red-800 text-[10px] font-bold">Escalated</span>
+</div>
+<div class="mt-1.5 pt-1.5 border-t border-red-100 flex items-center justify-between text-[11px]">
+<span class="text-slate-500">Notice Issued</span>
+<span class="font-bold text-red-700">4 Divisions</span>
+</div>
+</div>
+</div>
+<!-- Urgent Attention Queue - High-Hazard Escalation Strip -->
+<section class="bg-white border border-slate-200 rounded shadow-sm overflow-hidden">
+<div class="px-3 py-2 bg-red-50 border-b border-red-200 flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-700 text-[18px]">crisis_alert</span>
+<span class="text-xs font-bold text-red-900 uppercase tracking-wide">Critical Attention Queue — High Hazard Escalations</span>
+<span class="px-1.5 py-0.2 rounded bg-red-700 text-white font-mono text-[10px] font-bold">3 ACTIVE</span>
+</div>
+<div class="text-[11px] text-red-800 font-medium">
+            Strict Dispatch Mandate under Tamil Nadu Urban Municipalities Act, 1998
+          </div>
+</div>
+<!-- 3 High Hazard Cards Grid -->
+<div class="p-3 grid grid-cols-1 md:grid-cols-3 gap-3 bg-slate-50/60">
+<!-- Hazard 1 -->
+<div class="bg-white border border-red-200 rounded p-3 flex flex-col justify-between hover:border-red-300 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="px-1.5 py-0.5 rounded bg-red-700 text-white text-[10px] font-bold tracking-wider">P1 CRITICAL</span>
+<span class="px-1.5 py-0.5 rounded bg-red-100 text-red-800 text-[11px] font-bold font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 38m remaining
+                </span>
+</div>
+<h4 class="text-xs font-bold text-slate-900 leading-snug">Open Storm Drain Cave-in</h4>
+<p class="text-[11px] text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                Main road sinkhole adjacent to Bishop Heber College gate. Urgent risk to heavy traffic &amp; two-wheelers.
+              </p>
+<div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-700">
+<span class="material-symbols-outlined text-[15px] text-slate-500">location_on</span>
+<span class="font-bold text-[#00254e]">Ward 41</span>
+<span class="text-slate-400">•</span>
+<span class="truncate">Zone 3 - Thillai Nagar East 7th Cross</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[10px] font-mono text-slate-500 font-medium">TN-TRY-2025-08492</span>
+<button class="px-2.5 py-1 rounded bg-red-700 hover:bg-red-800 text-white text-[11px] font-bold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> Dispatch Ward Gang
+              </button>
+</div>
+</div>
+<!-- Hazard 2 -->
+<div class="bg-white border border-red-200 rounded p-3 flex flex-col justify-between hover:border-red-300 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="px-1.5 py-0.5 rounded bg-red-700 text-white text-[10px] font-bold tracking-wider">P1 CRITICAL</span>
+<span class="px-1.5 py-0.5 rounded bg-red-100 text-red-800 text-[11px] font-bold font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span> 1h 14m remaining
+                </span>
+</div>
+<h4 class="text-xs font-bold text-slate-900 leading-snug">Contaminated Potable Water Pipeline</h4>
+<p class="text-[11px] text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                Sewage seepage into drinking water trunk line reported by residential association. 45 households affected.
+              </p>
+<div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-700">
+<span class="material-symbols-outlined text-[15px] text-slate-500">location_on</span>
+<span class="font-bold text-[#00254e]">Ward 58</span>
+<span class="text-slate-400">•</span>
+<span class="truncate">Zone 3 - KK Nagar Sector 4</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[10px] font-mono text-slate-500 font-medium">TN-TRY-2025-08501</span>
+<button class="px-2.5 py-1 rounded bg-[#00254e] hover:bg-blue-950 text-white text-[11px] font-bold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">water_damage</span> Alert TWAD / Engg
+              </button>
+</div>
+</div>
+<!-- Hazard 3 -->
+<div class="bg-white border border-red-300 rounded p-3 flex flex-col justify-between hover:border-red-400 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="px-1.5 py-0.5 rounded bg-amber-700 text-white text-[10px] font-bold tracking-wider">P2 HIGH ESCALATED</span>
+<span class="px-1.5 py-0.5 rounded bg-red-700 text-white text-[11px] font-bold font-mono flex items-center gap-1 animate-pulse">
+<span class="material-symbols-outlined text-[13px]">warning</span> 4h overdue
+                </span>
+</div>
+<h4 class="text-xs font-bold text-slate-900 leading-snug">Snapped High-Tension Street Pole Wire</h4>
+<p class="text-[11px] text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                Exposed live streetlight conductor trailing over footpath near public bus shelter. Shock risk in drizzle.
+              </p>
+<div class="mt-2.5 pt-2 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-700">
+<span class="material-symbols-outlined text-[15px] text-slate-500">location_on</span>
+<span class="font-bold text-[#00254e]">Ward 14</span>
+<span class="text-slate-400">•</span>
+<span class="truncate">Zone 1 - Srirangam South Tower Gate</span>
+</div>
+</div>
+<div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+<span class="text-[10px] font-mono text-slate-500 font-medium">TN-TRY-2025-08479</span>
+<button class="px-2.5 py-1 rounded bg-amber-700 hover:bg-amber-800 text-white text-[11px] font-bold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Route to TANGEDCO
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Usable Municipal Filters Bar -->
+<section class="bg-white border border-slate-200 rounded p-3 shadow-sm space-y-2.5">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-2.5">
+<!-- Text search -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">search</span>
+<input class="w-full h-8 pl-8 pr-3 text-xs bg-slate-50 border border-slate-300 rounded focus:bg-white focus:border-[#123b6d] focus:ring-1 focus:ring-[#123b6d] transition-colors" placeholder="Filter by Token ID (TN-TRY-...), Citizen Name, Mobile, or Street Name..." type="text"/>
+</div>
+<!-- Quick Date & Control buttons -->
+<div class="flex items-center gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 h-8 px-2.5 bg-slate-100 border border-slate-200 rounded text-xs text-slate-700 font-medium">
+<span class="material-symbols-outlined text-[15px] text-slate-500">date_range</span>
+<span>26 Oct 2025 (Shift B: 06:00 - 14:00)</span>
+</div>
+<button class="h-8 px-2.5 rounded bg-slate-100 hover:bg-slate-200 border border-slate-300 text-xs font-semibold text-slate-700 flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[15px]">file_download</span> Export CSV
+            </button>
+<button class="h-8 px-2 rounded bg-slate-100 hover:bg-slate-200 border border-slate-300 text-xs font-semibold text-slate-700 flex items-center gap-1" title="Reset View">
+<span class="material-symbols-outlined text-[15px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Filter Selects -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 pt-1 border-t border-slate-100">
+<div>
+<label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Ward Selection</label>
+<select class="w-full h-7 text-xs bg-white border border-slate-300 rounded px-2 py-0 text-slate-800 font-medium focus:border-[#123b6d]">
+<option>All Wards (Zone 3)</option>
+<option selected="">Ward 41 - Thillai Nagar</option>
+<option>Ward 38 - Puthur</option>
+<option>Ward 39 - Cantonment</option>
+<option>Ward 42 - Woraiyur</option>
+<option>Ward 58 - KK Nagar</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Department</label>
+<select class="w-full h-7 text-xs bg-white border border-slate-300 rounded px-2 py-0 text-slate-800 font-medium focus:border-[#123b6d]">
+<option>All Departments (6)</option>
+<option selected="">Engineering &amp; Public Works</option>
+<option>Public Health &amp; Conservancy</option>
+<option>Town Planning &amp; Encroachments</option>
+<option>Street Lighting &amp; Electrical</option>
+<option>Water Supply &amp; Drainage</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Priority</label>
+<select class="w-full h-7 text-xs bg-white border border-slate-300 rounded px-2 py-0 text-slate-800 font-medium focus:border-[#123b6d]">
+<option selected="">All Priorities (P1 - P4)</option>
+<option>P1 - Critical (Immediate &lt;4h)</option>
+<option>P2 - High (Within 24h)</option>
+<option>P3 - Normal (48h)</option>
+<option>P4 - Routine (7 Days)</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Workflow Stage</label>
+<select class="w-full h-7 text-xs bg-white border border-slate-300 rounded px-2 py-0 text-slate-800 font-medium focus:border-[#123b6d]">
+<option>All Stages</option>
+<option>Pending Initial Assignment</option>
+<option selected="">Under Action / Investigation</option>
+<option>Work Order Issued</option>
+<option>Awaiting Officer Verification</option>
+<option>Closed with Citizen Approval</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-slate-500 mb-1">Active Filter View</label>
+<div class="h-7 px-2 bg-blue-50 border border-blue-200 rounded flex items-center justify-between text-xs text-[#00254e] font-semibold">
+<span>Matching Dossiers:</span>
+<span class="px-1.5 py-0.2 rounded bg-[#00254e] text-white text-[10px] font-mono">142</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Master Worklist Registry (High Density, 1px borders, sticky header appearance) -->
+<section class="bg-white border border-slate-200 rounded shadow-sm overflow-hidden">
+<!-- Table Control Toolbar -->
+<div class="px-3 py-2 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-[#00254e] uppercase tracking-wide">Master Worklist Registry</span>
+<span class="px-2 py-0.5 rounded bg-blue-100 text-[#00254e] text-[11px] font-semibold">Showing 1 – 6 of 142 Active Records</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[11px] text-slate-500">Pagination:</span>
+<div class="inline-flex rounded border border-slate-300 bg-white">
+<button class="px-2 py-0.5 text-xs text-slate-400 hover:text-slate-600 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+</button>
+<button class="px-2 py-0.5 text-xs font-bold bg-[#123b6d] text-white">1</button>
+<button class="px-2 py-0.5 text-xs text-slate-700 hover:bg-slate-100">2</button>
+<button class="px-2 py-0.5 text-xs text-slate-700 hover:bg-slate-100">3</button>
+<button class="px-2 py-0.5 text-xs text-slate-700 hover:bg-slate-100">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- High-Density Institutional Table -->
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse border-b border-slate-200 text-xs">
+<thead>
+<tr class="bg-slate-100/90 text-slate-700 font-bold uppercase tracking-wider text-[10px] border-b border-slate-200">
+<th class="py-2 px-3 border-r border-slate-200 w-36">Token / Grievance ID</th>
+<th class="py-2 px-3 border-r border-slate-200 w-28">Timestamp</th>
+<th class="py-2 px-3 border-r border-slate-200 min-w-[260px]">Category &amp; Citizen Summary</th>
+<th class="py-2 px-3 border-r border-slate-200 w-44">Ward &amp; Jurisdiction</th>
+<th class="py-2 px-3 border-r border-slate-200 w-36">SLA Countdown</th>
+<th class="py-2 px-3 border-r border-slate-200 w-44">Assigned Engineer / Inspector</th>
+<th class="py-2 px-3 border-r border-slate-200 w-24">Priority</th>
+<th class="py-2 px-3 border-r border-slate-200 w-36">Status</th>
+<th class="py-2 px-3 text-right w-28">Quick Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 text-[12px]">
+<!-- Row 1 -->
+<tr class="hover:bg-blue-50/50 bg-white transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-[#00254e] border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-slate-400">tag</span>
+<span>TN-TRY-2025-08492</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">26 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">08:14 AM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-slate-900 leading-tight">Storm Water Drain Cave-in</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Major sinkhole at Heber gate road cross; vehicle wheel trap risk</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-[#00254e]">Ward 41 (Zone 3)</div>
+<div class="text-slate-600 truncate">Thillai Nagar East 7th Cross</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-red-100 text-red-800 font-mono font-bold text-[11px] inline-flex items-center gap-1 border border-red-200">
+<span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
+                    38m remaining
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-semibold text-slate-900">Er. R. Murugan</div>
+<div class="text-slate-500 text-[10px]">AE (Public Works - Div 3)</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-red-700 text-white font-bold text-[10px]">P1 CRITICAL</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_shipping</span> Crew En Route
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-[#123b6d] hover:bg-[#00254e] text-white font-semibold text-[11px]">Dossier</button>
+<button class="p-0.5 text-slate-500 hover:text-slate-900" title="Reassign"><span class="material-symbols-outlined text-[16px]">sync_alt</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-blue-50/50 bg-slate-50/40 transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-[#00254e] border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-slate-400">tag</span>
+<span>TN-TRY-2025-08501</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">26 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">07:45 AM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-slate-900 leading-tight">Contaminated Water Pipeline</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Yellow turbid smell in municipal tap supply across 45 residences</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-[#00254e]">Ward 58 (Zone 3)</div>
+<div class="text-slate-600 truncate">KK Nagar Sector 4 Main</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-mono font-bold text-[11px] inline-flex items-center gap-1 border border-amber-200">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+                    1h 14m remaining
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-semibold text-slate-900">Er. S. Selvam</div>
+<div class="text-slate-500 text-[10px]">AEE (Water Works Dept)</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-red-700 text-white font-bold text-[10px]">P1 CRITICAL</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-blue-50 text-blue-800 border border-blue-200 text-[11px] font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">biotech</span> Lab Sampler Sent
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-[#123b6d] hover:bg-[#00254e] text-white font-semibold text-[11px]">Dossier</button>
+<button class="p-0.5 text-slate-500 hover:text-slate-900" title="Reassign"><span class="material-symbols-outlined text-[16px]">sync_alt</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 (Breached) -->
+<tr class="hover:bg-red-50/50 bg-red-50/20 transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-red-800 border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-red-400">tag</span>
+<span>TN-TRY-2025-08479</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">25 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">18:22 PM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-red-900 leading-tight">Damaged High Tension Street Pole Wire</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Dangling low hanging wire after heavy evening gusts near shelter</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-slate-800">Ward 14 (Zone 1)</div>
+<div class="text-slate-600 truncate">Srirangam South Tower Gate</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-red-700 text-white font-mono font-bold text-[11px] inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+                    4h overdue
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-red-700">Unassigned</div>
+<div class="text-slate-500 text-[10px]">Awaiting Electrical JE</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-amber-700 text-white font-bold text-[10px]">P2 HIGH</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-red-100 text-red-800 border border-red-300 text-[11px] font-bold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">error</span> SLA Breached
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-red-700 hover:bg-red-800 text-white font-bold text-[11px]">Assign Now</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-blue-50/50 bg-white transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-[#00254e] border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-slate-400">tag</span>
+<span>TN-TRY-2025-08442</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">25 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">14:10 PM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-slate-900 leading-tight">Unsegregated Waste Pile-Up</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Commercial vegetable waste accumulation near weekly santhai market compound</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-[#00254e]">Ward 28 (Zone 2)</div>
+<div class="text-slate-600 truncate">Gandhi Market Main Gate</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 font-mono font-semibold text-[11px] inline-flex items-center gap-1 border border-slate-200">
+<span class="material-symbols-outlined text-[13px] text-slate-500">schedule</span>
+                    18h remaining
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-semibold text-slate-900">Dr. V. Gomathi</div>
+<div class="text-slate-500 text-[10px]">Sanitary Officer (Zone 2)</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-800 font-semibold text-[10px]">P3 NORMAL</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-cyan-50 text-cyan-800 border border-cyan-200 text-[11px] font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">cleaning_services</span> Bobcat Deployed
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-[#123b6d] hover:bg-[#00254e] text-white font-semibold text-[11px]">Dossier</button>
+<button class="p-0.5 text-slate-500 hover:text-slate-900" title="Dispatch Order"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Resolved) -->
+<tr class="hover:bg-blue-50/50 bg-slate-50/40 transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-[#00254e] border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-slate-400">tag</span>
+<span>TN-TRY-2025-08410</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">24 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">11:05 AM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-slate-900 leading-tight">Non-Functional LED Street Lights (x8)</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Complete darkness in 3 consecutive cross streets behind central bus stand</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-[#00254e]">Ward 39 (Zone 3)</div>
+<div class="text-slate-600 truncate">Cantonment South Extension</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-bold text-[11px] inline-flex items-center gap-1 border border-emerald-200">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    Met in 14h
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-semibold text-slate-900">Thiru M. Arumugam</div>
+<div class="text-slate-500 text-[10px]">Electrical Inspector (Z-3)</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-800 font-semibold text-[10px]">P3 NORMAL</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span> Redressed / Closed
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-[11px] border border-slate-300">Proof</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-blue-50/50 bg-white transition-colors">
+<td class="py-2 px-3 font-mono font-bold text-[#00254e] border-r border-slate-200">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[13px] text-slate-400">tag</span>
+<span>TN-TRY-2025-08398</span>
+</a>
+</td>
+<td class="py-2 px-3 text-slate-600 whitespace-nowrap border-r border-slate-200 text-[11px]">
+<span class="font-medium text-slate-800">24 Oct 2025</span><br/>
+<span class="font-mono text-slate-500">09:30 AM</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<div class="font-bold text-slate-900 leading-tight">Illegal Commercial Footpath Encroachment</div>
+<div class="text-[11px] text-slate-600 truncate max-w-sm">Temporary iron shed erected over pedestrian tactile walkway near market</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-bold text-[#00254e]">Ward 42 (Zone 3)</div>
+<div class="text-slate-600 truncate">Woraiyur Market Road</div>
+</td>
+<td class="py-2 px-3 whitespace-nowrap border-r border-slate-200">
+<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 font-mono font-semibold text-[11px] inline-flex items-center gap-1 border border-slate-200">
+<span class="material-symbols-outlined text-[13px] text-slate-500">schedule</span>
+                    22h remaining
+                  </span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200 text-[11px]">
+<div class="font-semibold text-slate-900">Thiru. P. Saravanan</div>
+<div class="text-slate-500 text-[10px]">Town Planning Officer</div>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.2 rounded bg-amber-700 text-white font-bold text-[10px]">P2 HIGH</span>
+</td>
+<td class="py-2 px-3 border-r border-slate-200">
+<span class="px-1.5 py-0.5 rounded bg-blue-50 text-blue-900 border border-blue-200 text-[11px] font-medium inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">gavel</span> Sec 216 Notice Issued
+                  </span>
+</td>
+<td class="py-2 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-0.5 rounded bg-[#123b6d] hover:bg-[#00254e] text-white font-semibold text-[11px]">Dossier</button>
+<button class="p-0.5 text-slate-500 hover:text-slate-900" title="Dispatch Order"><span class="material-symbols-outlined text-[16px]">more_vert</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Action Bar -->
+<div class="px-3 py-2 bg-slate-50 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-2 text-[11px]">
+<div class="flex items-center gap-3 text-slate-600">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-red-700"></span> P1 Critical (&lt;4h SLA)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-amber-700"></span> P2 High (24h SLA)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-slate-400"></span> P3 Normal (48h SLA)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold transition-colors">
+              Batch Reassign (0 selected)
+            </button>
+<button class="px-2.5 py-1 rounded bg-[#123b6d] hover:bg-[#00254e] text-white font-semibold transition-colors">
+              Generate Shift Summary
+            </button>
+</div>
+</div>
+</section>
+<!-- Bottom Split Section: Compact GIS Ward Map & Verification Audit Queue -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-3.5">
+<!-- Compact GIS Ward Map View (8 Cols) -->
+<div class="lg:col-span-8 bg-white border border-slate-200 rounded p-3 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-2 border-b border-slate-100">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#123b6d] text-[18px]">map</span>
+<h3 class="text-xs font-bold text-[#00254e] uppercase tracking-wide">GIS Ward Demarcation &amp; Field Heatmap</h3>
+</div>
+<p class="text-[11px] text-slate-500 mt-0.5">Live geo-coordinates of grievances logged in Zone 3 (K.Abishekapuram Jurisdiction)</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-bold font-mono">
+                CAD GIS ACTIVE
+              </span>
+</div>
+</div>
+<!-- Map Container -->
+<div class="mt-2.5 w-full h-64 rounded border border-slate-200 relative overflow-hidden bg-slate-100 flex flex-col justify-between p-3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVkpO_BmaNrssBCCqjs3uLG9qRiRUGxfWU2iiLzMf4TaMMHoZHYq4RHyknNk-igDq7zfwlXYRuCO-TrILO2CpNqZpW6hG7NIh1Pwd7oSa1EA3tOUjL56gh25GyI9UcLFv8BuQlNMYy2D9dJPFHS0yEAd2kCMxgDchBTZv49vKo0hCsH31VGzf83vxumm3qVlwarbwxWqgYRdsxxHwHErcyP1YetgQSyOZk_PpBbYZknipiDuccDAnO'); background-size: cover; background-position: center;">
+<!-- Map Telemetry Cards -->
+<div class="flex justify-between items-start">
+<div class="bg-white/95 backdrop-blur-sm border border-slate-300 p-2 rounded shadow-sm text-slate-900 text-xs">
+<div class="font-bold text-[#00254e] text-xs">Zone 3 Headquarters: K.Abishekapuram</div>
+<div class="text-[11px] text-slate-600">Lat: 10.7905° N, Long: 78.7047° E</div>
+<div class="mt-1 flex items-center gap-2 text-[10px] text-emerald-700 font-bold">
+<span>● 14 Municipal Vehicles On Field</span>
+</div>
+</div>
+<div class="bg-white/95 backdrop-blur-sm border border-slate-300 px-2 py-1 rounded shadow-sm text-[11px] font-mono text-slate-700">
+                Resolution Radius: 4.8 km²
+              </div>
+</div>
+<!-- Hotspot Alert Pill -->
+<div class="bg-white/95 backdrop-blur-sm border border-red-200 px-2.5 py-1.5 rounded shadow-sm flex items-center gap-2 w-fit">
+<span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
+<span class="text-xs font-bold text-red-900">Cluster Alert: Thillai Nagar East</span>
+<span class="text-slate-400">•</span>
+<span class="text-[11px] text-slate-700 font-medium">7 Water &amp; Drain grievances in past 180 min</span>
+</div>
+</div>
+<!-- Ward Open Count Strip -->
+<div class="grid grid-cols-4 gap-2 pt-2.5 border-t border-slate-100 mt-2.5 text-center">
+<div class="p-1.5 rounded bg-slate-50 border border-slate-200">
+<span class="text-[10px] uppercase font-bold text-slate-500 block">Ward 41</span>
+<span class="text-sm font-bold text-red-700 font-mono">18 Open</span>
+</div>
+<div class="p-1.5 rounded bg-slate-50 border border-slate-200">
+<span class="text-[10px] uppercase font-bold text-slate-500 block">Ward 38</span>
+<span class="text-sm font-bold text-slate-800 font-mono">6 Open</span>
+</div>
+<div class="p-1.5 rounded bg-slate-50 border border-slate-200">
+<span class="text-[10px] uppercase font-bold text-slate-500 block">Ward 39</span>
+<span class="text-sm font-bold text-slate-800 font-mono">11 Open</span>
+</div>
+<div class="p-1.5 rounded bg-slate-50 border border-slate-200">
+<span class="text-[10px] uppercase font-bold text-slate-500 block">Ward 58</span>
+<span class="text-sm font-bold text-amber-700 font-mono">14 Open</span>
+</div>
+</div>
+</div>
+<!-- Field Verification & Sign-off Queue (4 Cols) -->
+<div class="lg:col-span-4 bg-white border border-slate-200 rounded p-3 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-2 border-b border-slate-100">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-700 text-[18px]">verified_user</span>
+<h3 class="text-xs font-bold text-[#00254e] uppercase tracking-wide">Work Order Verification Audit</h3>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">1 Pending Sign-off</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-1">Pending sign-off by Zonal Officer Thiru. K. Senthil Kumar</p>
+<!-- Verification Work Item -->
+<div class="mt-2.5 p-2.5 rounded bg-slate-50 border border-slate-200 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs font-bold text-[#00254e]">TN-TRY-2025-08365</span>
+<span class="px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Field Work Complete
+                </span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900 leading-snug">Replacement of Damaged 200mm Water Valve</h4>
+<p class="text-[11px] text-slate-600 mt-0.5">Inspector uploaded geotagged proof with citizen OTP acknowledgment.</p>
+</div>
+<!-- Photographic Evidence Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="relative rounded overflow-hidden h-20 border border-slate-200 bg-slate-200">
+<img alt="Before repair condition of water valve" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWKq0P2nR_sB8nlgx4hqUGkJ4rddJ2-kuD-UTliUG4d8Zl4DV895Fo1yOmARExTNWKAA5qclKZIrvqC1LGKJHZtbZcMmG4Jm2vARia48gnID9G3h5T9Uit5nDxGk3Phz4oA-VBp5vVSu3OkAtGLBA8FPAQ41b-iBHpODkpBpB3x0G9Y3oCDtmENRQHof2whdl3JvRMXso3lSeE5YNCRa3EnTBgfT_lF3tdsn-0oj2u9hXEX6BzG7mk"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.2 rounded bg-[#00254e]/90 text-white text-[9px] font-bold font-mono">BEFORE</span>
+</div>
+<div class="relative rounded overflow-hidden h-20 border border-slate-200 bg-slate-200">
+<img alt="After repair completed valve installation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYGeLmh58jTa3vRpxub4zCRfzfrBSSguDy-S1XE7vNbeGyQMuQQ0aa8xRZOG7c6mmyx_zFxM6ODcjspEHYZLiBAyAhwea-8-Po8LRgELJGqqRn0SFD90AAyoFSn1SgSqoaXdyEfpONxLS-oAwgqxPtreiIR-kLiTk1PVyhn_kDu9qoSzEg4LeYi6sEuGV0MKHEphdMBuYqWAWniLUNMxkHKsUTepuGiWkMGMt-KPiNLnJ6Xo7DVGZ"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.2 rounded bg-emerald-800/90 text-white text-[9px] font-bold font-mono">AFTER REPAIR</span>
+</div>
+</div>
+<!-- Citizen Verification Code -->
+<div class="pt-1.5 border-t border-slate-200 flex items-center justify-between text-[11px]">
+<span class="text-slate-600 font-medium">Citizen Verification Code:</span>
+<span class="font-mono font-bold text-[#00254e] bg-white px-2 py-0.5 rounded border border-slate-200 tracking-wider">492084</span>
+</div>
+</div>
+</div>
+<!-- Officer Decision Action Buttons -->
+<div class="mt-3 space-y-1.5">
+<button class="w-full py-1.5 rounded bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span> Approve &amp; Issue Redressal Certificate
+            </button>
+<button class="w-full py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-red-700 border border-slate-300 text-xs font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">replay</span> Reject &amp; Order Re-inspection
+            </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>
